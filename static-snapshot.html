@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MiRenova — Reformas integrales en Málaga (static snapshot)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="base.css">
+</head>
+<body>
+<!-- Static desktop snapshot assembled from sections/*.html. For responsive behaviour open "MiRenova Home.dc.html" (live prototype). -->
+<div style="background:#fff; overflow-x:clip;">
+<!-- ===== 00-header · Header (sticky) + mobile menu ===== -->
+<header style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,.94); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid #E8EDF3;">
+  <div style="max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px); height:80px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+    <a href="#inicio" style="display:flex; align-items:center;"><img src="assets/logo-mr.png" alt="MiRenova" style="height:34px; width:auto; display:block;"></a>
+    
+      <nav style="display:flex; gap:36px; font-size:15px; font-weight:500;" data-show="desktop &gt;1080px">
+        <a href="#servicios" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Servicios</a>
+        <a href="#proceso" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Proceso</a>
+        <a href="#precios" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Precios</a>
+        <a href="#zonas" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Zonas</a>
+        <a href="#faq" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Preguntas</a>
+        <a href="#contacto" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Contacto</a>
+      </nav>
+    
+    <div style="display:flex; align-items:center; gap:16px;">
+      
+        <a href="tel:+34652469039" style="margin-right:8px; font-size:15px; font-weight:700; color:#0E2A4F; white-space:nowrap;" data-show="desktop &gt;1080px" data-style-hover="color:#1F7BFF;">+34 652 469 039</a>
+      
+      
+        <a href="#contacto" style="display:inline-flex; align-items:center; height:46px; padding:0 22px; background:#1F7BFF; color:#fff; font-size:14px; font-weight:600; letter-spacing:.02em; border-radius:3px; white-space:nowrap; box-shadow:0 12px 24px -12px rgba(31,123,255,.7);" data-show="≥560px" data-style-hover="background:#1667E0; color:#fff;">Solicitar presupuesto</a>
+      
+      
+        <button aria-label="Menú" style="width:46px; height:46px; display:grid; place-items:center; border:1.5px solid #D5DEE9; border-radius:3px; background:#fff; color:#0E2A4F; cursor:pointer;" data-show="mobile/tablet ≤1080px" hidden="" data-on-click="toggleMenu" data-style-hover="border-color:#1F7BFF; color:#1F7BFF;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" data-state="menu-closed"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h10"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" data-state="menu-open" hidden=""><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
+        </button>
+      
+    </div>
+  </div>
+  
+    <div style="position:absolute; left:0; right:0; top:100%; background:#fff; border-bottom:1px solid #E8EDF3; box-shadow:0 30px 50px -30px rgba(10,29,56,.35);" data-state="menu-open" hidden="">
+      <nav style="max-width:1300px; margin:0 auto; padding:8px clamp(20px,4vw,40px) 28px; display:grid;">
+        <a href="#servicios" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Servicios<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="#proceso" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Proceso<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="#precios" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Precios<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="#zonas" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Zonas<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="#faq" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Preguntas<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="#contacto" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Contacto<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="tel:+34652469039" style="margin-top:20px; font-size:19px; font-weight:700; color:#0E2A4F;">+34 652 469 039</a>
+        <a href="#contacto" style="margin-top:16px; display:flex; align-items:center; justify-content:center; height:54px; background:#1F7BFF; color:#fff; font-size:15px; font-weight:600; letter-spacing:.02em; border-radius:3px;" data-on-click="closeMenu" data-style-hover="background:#1667E0; color:#fff;">Solicitar presupuesto</a>
+      </nav>
+    </div>
+  
+</header>
+
+<!-- ===== 01-hero · Hero: background slideshow + quote form + benefits strip ===== -->
+<section id="inicio" data-screen-label="01 Hero" style="position:relative; z-index:3; background:#fff;">
+  
+
+  
+    <div style="position:absolute; inset:0; overflow:hidden; background:#0A1D38;">
+      
+        <div style="position:absolute; inset:0; background-image:url(&quot;assets/img/FOTO-01-hero-malaga-living-room.webp&quot;); background-size:cover; background-position:center; opacity:1; transform:scale(1.06); transition:opacity 1.2s ease, transform 7s linear;" data-slide="0"></div>
+      
+        <div style="position:absolute; inset:0; background-image:url(&quot;assets/img/FOTO-06-malaga-penthouse.webp&quot;); background-size:cover; background-position:center; opacity:0; transform:scale(1); transition:opacity 1.2s ease, transform 7s linear;" data-slide="1"></div>
+      
+        <div style="position:absolute; inset:0; background-image:url(&quot;assets/img/FOTO-07-costa-del-sol-villa.webp&quot;); background-size:cover; background-position:center; opacity:0; transform:scale(1); transition:opacity 1.2s ease, transform 7s linear;" data-slide="2"></div>
+      
+        <div style="position:absolute; inset:0; background-image:url(&quot;assets/img/FOTO-08-porcelain-kitchen.webp&quot;); background-size:cover; background-position:center; opacity:0; transform:scale(1); transition:opacity 1.2s ease, transform 7s linear;" data-slide="3"></div>
+      
+        <div style="position:absolute; inset:0; background-image:url(&quot;assets/img/FOTO-09-spa-bathroom.webp&quot;); background-size:cover; background-position:center; opacity:0; transform:scale(1); transition:opacity 1.2s ease, transform 7s linear;" data-slide="4"></div>
+      
+      <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(10,29,56,.94) 0%, rgba(10,29,56,.78) 40%, rgba(10,29,56,.3) 100%);"></div>
+      <div style="position:absolute; inset:auto 0 0 0; height:45%; background:linear-gradient(0deg, rgba(10,29,56,.92), rgba(10,29,56,0));"></div>
+    </div>
+    <div style="position:relative; z-index:1; max-width:1300px; margin:0 auto; padding:clamp(72px,8vw,120px) clamp(20px,4vw,40px) 0;">
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,460px); gap:clamp(40px,4vw,64px); align-items:center;" data-responsive="grid: [1fr | 460px] &gt;980px | 1 col ≤980px">
+        <div style="max-width:680px;">
+          <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#7CD6F9;"><span style="width:22px; height:2px; background:linear-gradient(90deg,#4B95FF,#7CD6F9);"></span>Málaga · Costa del Sol</div>
+          <h1 style="margin-top:28px; font-size:clamp(42px,5vw,74px); line-height:1.02; font-weight:800; letter-spacing:-.03em; color:#fff; text-wrap:balance;"><span style="background:linear-gradient(95deg,#4B95FF,#7CD6F9); -webkit-background-clip:text; background-clip:text; color:transparent;">Reformas integrales</span> en Málaga para renovar tu hogar</h1>
+          <div style="margin-top:32px; display:grid; gap:16px; max-width:540px;">
+            <p style="font-size:18px; line-height:1.7; color:#D5E0EE; text-wrap:pretty;">En MiRenova realizamos reformas en la provincia de Málaga para particulares que quieren actualizar su piso, casa o villa. Organizamos tu reforma integral, desde la planificación hasta la entrega, con presupuesto detallado y coordinación de los trabajos.</p>
+            <p style="font-size:16px; line-height:1.75; color:#AFC0D7; text-wrap:pretty;">Adaptamos nuestras reformas a tus necesidades, al estado de la vivienda y a la calidad de los acabados que buscas. Consulta inicial, visita con mediciones y presupuesto gratuitos.</p>
+          </div>
+          <div style="margin-top:40px; display:flex; flex-wrap:wrap; gap:14px;">
+            <a href="tel:+34652469039" style="display:inline-flex; align-items:center; gap:12px; height:56px; padding:0 28px; border:1.5px solid rgba(255,255,255,.7); color:#fff; font-size:15px; font-weight:600; letter-spacing:.02em; border-radius:3px;" data-style-hover="background:#fff; color:#0E2A4F;">Llamar al +34 652 469 039</a>
+          </div>
+        </div>
+        <form style="position:relative; justify-self:start; width:100%; max-width:460px; background:#fff; border-radius:4px; padding:clamp(28px,3vw,40px); box-shadow:0 60px 100px -40px rgba(0,0,0,.65), 0 20px 40px -20px rgba(0,0,0,.3); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr)); gap:16px;" data-on-submit="onHeroSubmit">
+          <div aria-hidden="true" style="position:absolute; inset:0; z-index:-1; overflow:hidden; border-radius:inherit; pointer-events:none;">
+            <div style="position:absolute; right:-70px; top:-70px; width:150px; aspect-ratio:1; transform:rotate(45deg); border-radius:18%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); opacity:.16;"></div>
+            <div style="position:absolute; right:22px; bottom:-60px; width:110px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; border:1.5px solid rgba(31,111,255,.14);"></div>
+          </div>
+          <div style="grid-column:1 / -1; display:grid; gap:8px; margin-bottom:4px;">
+            <h2 style="font-size:24px; line-height:1.2; font-weight:800; letter-spacing:-.015em; color:#0E2A4F;">Solicita presupuesto</h2>
+            <p style="font-size:14px; line-height:1.6; color:#5A6A82;">Consulta inicial, visita con mediciones y presupuesto gratuitos.</p>
+          </div>
+          <label style="min-width:0; display:grid; gap:8px; font-size:13px; font-weight:600; color:#0E2A4F;">Nombre<input type="text" placeholder="Tu nombre" style="width:100%; min-width:0; box-sizing:border-box; height:50px; padding:0 16px; border:1px solid #D5DEE9; border-radius:3px; background:#F6F8FB; font-family:inherit; font-size:15px; color:#0E2A4F; outline:none;" data-style-focus="border-color:#1F7BFF; background:#fff; box-shadow:0 0 0 3px rgba(31,123,255,.15);"></label>
+          <label style="min-width:0; display:grid; gap:8px; font-size:13px; font-weight:600; color:#0E2A4F;">Teléfono<input type="tel" placeholder="+34" style="width:100%; min-width:0; box-sizing:border-box; height:50px; padding:0 16px; border:1px solid #D5DEE9; border-radius:3px; background:#F6F8FB; font-family:inherit; font-size:15px; color:#0E2A4F; outline:none;" data-style-focus="border-color:#1F7BFF; background:#fff; box-shadow:0 0 0 3px rgba(31,123,255,.15);"></label>
+          <label style="min-width:0; display:grid; gap:8px; font-size:13px; font-weight:600; color:#0E2A4F; grid-column:1 / -1;">Ubicación de la vivienda<input type="text" placeholder="Málaga, Marbella…" style="width:100%; min-width:0; box-sizing:border-box; height:50px; padding:0 16px; border:1px solid #D5DEE9; border-radius:3px; background:#F6F8FB; font-family:inherit; font-size:15px; color:#0E2A4F; outline:none;" data-style-focus="border-color:#1F7BFF; background:#fff; box-shadow:0 0 0 3px rgba(31,123,255,.15);"></label>
+          <label style="min-width:0; display:grid; gap:8px; font-size:13px; font-weight:600; color:#0E2A4F; grid-column:1 / -1;">Tipo de reforma<select style="width:100%; min-width:0; box-sizing:border-box; height:50px; padding:0 14px; border:1px solid #D5DEE9; border-radius:3px; background:#F6F8FB; font-family:inherit; font-size:15px; color:#0E2A4F; outline:none;" data-style-focus="border-color:#1F7BFF; background:#fff; box-shadow:0 0 0 3px rgba(31,123,255,.15);"><option>Reforma integral de piso o ático</option><option>Reforma de casa o villa</option><option>Reforma de cocina</option><option>Reforma de baño</option></select></label>
+          <button type="submit" style="grid-column:1 / -1; margin-top:6px; height:56px; border:0; border-radius:3px; background:#1F7BFF; color:#fff; font-family:inherit; font-size:15px; font-weight:600; letter-spacing:.02em; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:12px; box-shadow:0 18px 36px -16px rgba(31,123,255,.8);" data-style-hover="background:#1667E0;">Solicitar presupuesto<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+        </form>
+      </div>
+    </div>
+  
+
+  
+
+  <div style="position:relative; z-index:2; max-width:1300px; margin:clamp(48px,7vw,104px) auto 0px; padding:0 clamp(20px,4vw,40px); transform:translateY(50%);" data-responsive="margin-bottom: 0 &gt;560px | 40px ≤560px ; transform: translateY(50%) &gt;560px | none ≤560px">
+    <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; background:#EDF1F6; border-radius:4px; box-shadow:0 40px 80px -30px rgba(10,29,56,.35), 0 10px 24px -12px rgba(10,29,56,.15); overflow:hidden;" data-responsive="grid: 4 cols &gt;1080px | 2 cols 561–1080px | 1 col ≤560px">
+      <div style="display:flex; align-items:center; gap:18px; padding:30px 32px; background:#fff;">
+        <div style="flex:none; width:48px; height:48px; display:grid; place-items:center; position:relative;"><div style="position:absolute; inset:7px; transform:rotate(45deg); border-radius:8px; background:#E4EEFB;"></div><svg style="position:relative;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+        <div><div style="font-size:17px; font-weight:700; color:#0E2A4F;">Consulta inicial</div><div style="margin-top:4px; font-size:14px; color:#5A6A82;">gratuita</div></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:18px; padding:30px 32px; background:#fff;">
+        <div style="flex:none; width:48px; height:48px; display:grid; place-items:center; position:relative;"><div style="position:absolute; inset:7px; transform:rotate(45deg); border-radius:8px; background:#E4EEFB;"></div><svg style="position:relative;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"></path><path d="m14.5 12.5 2-2"></path><path d="m11.5 9.5 2-2"></path><path d="m8.5 6.5 2-2"></path><path d="m17.5 15.5 2-2"></path></svg></div>
+        <div><div style="font-size:17px; font-weight:700; color:#0E2A4F;">Visita con mediciones</div><div style="margin-top:4px; font-size:14px; color:#5A6A82;">gratuita</div></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:18px; padding:30px 32px; background:#fff;">
+        <div style="flex:none; width:48px; height:48px; display:grid; place-items:center; position:relative;"><div style="position:absolute; inset:7px; transform:rotate(45deg); border-radius:8px; background:#E4EEFB;"></div><svg style="position:relative;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></div>
+        <div><div style="font-size:17px; font-weight:700; color:#0E2A4F;">Presupuesto detallado</div><div style="margin-top:4px; font-size:14px; color:#5A6A82;">gratuito</div></div>
+      </div>
+      <a href="tel:+34652469039" style="display:flex; flex-direction:column; justify-content:center; gap:6px; padding:30px 32px; background:#0E2A4F; color:#fff;" data-style-hover="background:#13366A; color:#fff;">
+        <span style="font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#7CD6F9;">Llamar</span>
+        <span style="font-size:20px; font-weight:700; white-space:nowrap;">+34 652 469 039</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02-sobre-nosotros · Sobre nosotros (light) ===== -->
+<section id="sobre" data-screen-label="02 Sobre nosotros" style="position:relative; background:#fff; padding:calc(clamp(96px,11vw,160px) + 70px) 0 calc(clamp(80px,9vw,130px) + clamp(140px,14vw,220px));" data-responsive="padding-top: calc(clamp(96px,11vw,160px) + 70px) &gt;560px | 80px ≤560px">
+  <div style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+    <img src="assets/img/BG-01-architectural-light-shadow.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:right center; opacity:.7; display:block;">
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, #fff 0%, rgba(255,255,255,.94) 42%, rgba(255,255,255,.45) 100%);"></div>
+    <div style="position:absolute; inset:0 0 auto 0; height:28%; background:linear-gradient(180deg, #fff, rgba(255,255,255,0));"></div>
+    <div style="position:absolute; left:-130px; top:40%; width:260px; aspect-ratio:1; transform:rotate(45deg); border-radius:12%; background:#EEF3F9;"></div>
+    <div style="position:absolute; left:60px; top:66%; width:90px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; border:2px solid #CFE4FF;"></div>
+  </div>
+  <div style="position:relative; z-index:1; max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px);">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr)); gap:clamp(56px,7vw,110px); align-items:center;">
+      <div style="max-width:580px;">
+        <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#1667E0;"><span style="width:22px; height:2px; background:linear-gradient(90deg,#1F6FFF,#5EC4F8);"></span>Sobre nosotros</div>
+        <h2 style="margin-top:24px; font-size:clamp(34px,3.7vw,56px); line-height:1.06; font-weight:800; letter-spacing:-.025em; color:#0E2A4F; text-wrap:balance;"><span style="background:linear-gradient(95deg,#1F6FFF,#3FA0F7); -webkit-background-clip:text; background-clip:text; color:transparent;">MiRenova,</span> tu empresa de reformas en Málaga</h2>
+        <div style="margin-top:36px; display:grid; gap:20px;">
+          <p style="font-size:17px; line-height:1.75; color:#33435B; text-wrap:pretty;">MiRenova es la marca de reformas de ARVION STUDIO S.L. Nuestra empresa tiene su base en Málaga y trabaja con viviendas de la Costa del Sol, combinando equipo propio y profesionales especializados.</p>
+          <p style="font-size:17px; line-height:1.75; color:#46566E; text-wrap:pretty;">En las reformas, ayudamos a nuestros clientes a concretar sus expectativas: qué renovar, cómo aprovechar cada espacio y qué inversión requiere el proyecto. Nuestro compromiso es explicar las decisiones y mantener una comunicación clara durante la obra.</p>
+        </div>
+      </div>
+      <div style="position:relative; width:100%; max-width:540px; aspect-ratio:5/6; justify-self:end;">
+        <div style="position:absolute; left:14%; top:9%; right:0; bottom:0; border:2px solid #CFE4FF; border-radius:4px;"></div>
+        <div style="position:absolute; left:0; top:0; right:10%; bottom:10%; border-radius:4px; overflow:hidden; background:#E4EEFB; box-shadow:0 60px 90px -40px rgba(10,29,56,.4);">
+          <img src="assets/img/FOTO-03-team-on-site.webp" alt="Dos profesionales revisando planos en una reforma" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+        <div style="position:absolute; left:-5%; bottom:2%; width:24%; aspect-ratio:1; display:grid; place-items:center;">
+          <div style="position:absolute; inset:0; transform:rotate(45deg); border-radius:14%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 30px 50px -16px rgba(31,111,255,.6);"></div>
+          <svg style="position:relative;" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03-equipo-y-taller · Equipo propio / Taller propio (dark, cards overlap section 02) ===== -->
+<section data-screen-label="02b Equipo y taller" style="position:relative; z-index:1; display:flow-root; background:#0A1D38; color:#fff; padding:0 0 clamp(80px,12.5vw,180px);">
+  <div style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 80% 40%, rgba(31,111,255,.2), transparent 60%);"></div>
+    <div style="position:absolute; right:-260px; top:20%; width:620px; aspect-ratio:1; transform:rotate(45deg); border-radius:10%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); opacity:.14; filter:blur(10px);"></div>
+    <div style="position:absolute; left:-140px; bottom:-120px; width:320px; aspect-ratio:1; transform:rotate(45deg); border-radius:12%; border:2px solid rgba(124,214,249,.2);"></div>
+  </div>
+  <div style="position:relative; z-index:1; max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px);">
+    <div style="margin-top:calc(-1 * clamp(140px,14vw,220px)); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr)); gap:32px;">
+      <div style="position:relative; background:#0F2A4D; border:1px solid rgba(124,214,249,.14); border-radius:4px; box-shadow:0 50px 80px -40px rgba(0,0,0,.65);">
+        <div style="position:relative; aspect-ratio:16/9;">
+          <div style="position:absolute; inset:0; border-radius:4px 4px 0 0; overflow:hidden; color:#7CD6F9;"><img src="assets/img/FOTO-04-porcelain-tile-quality-check.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></div>
+          <div style="position:absolute; left:36px; bottom:-32px; width:64px; height:64px; display:grid; place-items:center;"><div style="position:absolute; inset:9px; transform:rotate(45deg); border-radius:10px; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 14px 30px -8px rgba(31,111,255,.7);"></div><svg style="position:relative;" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+        </div>
+        <div style="padding:60px clamp(24px,5vw,40px) 44px; display:grid; gap:18px;">
+          <h3 style="font-size:26px; line-height:1.2; font-weight:700; letter-spacing:-.015em; color:#fff;">Equipo propio y coordinación de gremios</h3>
+          <p style="font-size:16px; line-height:1.75; color:#B4C4DA; text-wrap:pretty;">El equipo ejecuta los trabajos principales y coordina los gremios necesarios. Para diseño, proyecto técnico, carpintería a medida y climatización contamos con profesionales colaboradores según el encargo.</p>
+          <p style="font-size:16px; line-height:1.75; color:#B4C4DA; text-wrap:pretty;">Durante el proceso de reformas, nuestros profesionales supervisan la preparación de las superficies y la calidad de los acabados. Este control de obra permite revisar el resultado antes de avanzar.</p>
+        </div>
+      </div>
+      <div style="position:relative; background:#0F2A4D; border:1px solid rgba(124,214,249,.14); border-radius:4px; box-shadow:0 50px 80px -40px rgba(0,0,0,.65);">
+        <div style="position:relative; aspect-ratio:16/9;">
+          <div style="position:absolute; inset:0; border-radius:4px 4px 0 0; overflow:hidden; color:#7CD6F9;"><img src="assets/img/FOTO-05-porcelain-workshop.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></div>
+          <div style="position:absolute; left:36px; bottom:-32px; width:64px; height:64px; display:grid; place-items:center;"><div style="position:absolute; inset:9px; transform:rotate(45deg); border-radius:10px; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 14px 30px -8px rgba(31,111,255,.7);"></div><svg style="position:relative;" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"></path><path d="m14.5 12.5 2-2"></path><path d="m11.5 9.5 2-2"></path><path d="m8.5 6.5 2-2"></path><path d="m17.5 15.5 2-2"></path></svg></div>
+          
+            <div style="position:absolute; right:-36px; top:-84px; width:210px; height:170px; z-index:2; color:#7CD6F9;" data-show="desktop &gt;1080px" data-decor=""><img src="assets/img/PNG-02-tile-stone-samples.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block;"></div>
+          
+        </div>
+        <div style="padding:60px clamp(24px,5vw,40px) 44px; display:grid; gap:18px;">
+          <h3 style="font-size:26px; line-height:1.2; font-weight:700; letter-spacing:-.015em; color:#fff;">Taller propio y atención al detalle</h3>
+          <p style="font-size:16px; line-height:1.75; color:#B4C4DA; text-wrap:pretty;">Nuestra experiencia en reformas incluye porcelánico de gran formato, encimeras y lavabos a medida. El taller permite adaptar estas piezas al espacio, cuidando encuentros, cortes y continuidad del acabado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04-servicios · Servicios ===== -->
+<section id="servicios" data-screen-label="03 Servicios" style="position:relative; background:#fff; padding:clamp(80px,12.5vw,180px) 0;">
+  <div style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+    <div style="position:absolute; left:-250px; top:30%; width:460px; aspect-ratio:1; transform:rotate(45deg); border-radius:10%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 60px 90px -30px rgba(31,111,255,.45);"></div>
+    <div style="position:absolute; left:-90px; top:14%; width:220px; aspect-ratio:1; transform:rotate(45deg); border-radius:12%; background:#E4EEFB;"></div>
+    <div style="position:absolute; left:120px; top:63%; width:120px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; border:2px solid #A9D8F7;"></div>
+    <div style="position:absolute; right:-140px; bottom:-120px; width:360px; aspect-ratio:1; transform:rotate(45deg); border-radius:10%; background:#F2F5F9;"></div>
+    
+      <div style="position:absolute; left:0; bottom:4%; width:260px; height:240px; pointer-events:auto; color:#7A8AA0;" data-show="desktop &gt;1080px" data-decor=""><img src="assets/img/PNG-04-interior-material-moodboard.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block;"></div>
+    
+  </div>
+  <div style="position:relative; z-index:1; max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px);">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr)); gap:32px 80px; align-items:end;">
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#1667E0;"><span style="width:22px; height:2px; background:linear-gradient(90deg,#1F6FFF,#5EC4F8);"></span>Servicios</div>
+        <h2 style="margin-top:24px; font-size:clamp(34px,3.7vw,56px); line-height:1.06; font-weight:800; letter-spacing:-.025em; color:#0E2A4F; text-wrap:balance;"><span style="background:linear-gradient(95deg,#1F6FFF,#3FA0F7); -webkit-background-clip:text; background-clip:text; color:transparent;">Servicios de reformas</span> para viviendas</h2>
+      </div>
+      <p style="font-size:17px; line-height:1.75; color:#46566E; max-width:520px; text-wrap:pretty;">Nuestras reformas en Málaga abarcan viviendas completas, cocinas y baños. Cada servicio se define en el presupuesto, con los trabajos y suministros acordados para tu reforma integral.</p>
+    </div>
+
+    <div style="margin-top:clamp(64px,7vw,96px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr)); gap:28px;">
+      <article style="position:relative; background:#F2F5F9; border-radius:4px; transition:transform .35s ease, box-shadow .35s ease; box-shadow:0 1px 0 rgba(10,29,56,.04);" data-style-hover="transform:translateY(-6px); box-shadow:0 40px 70px -36px rgba(10,29,56,.35);">
+        <div style="position:relative; aspect-ratio:16/10;">
+          <div style="position:absolute; inset:0; border-radius:4px 4px 0 0; overflow:hidden; color:#7A8AA0;"><img src="assets/img/FOTO-06-malaga-penthouse.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></div>
+          <div style="position:absolute; left:32px; bottom:-34px; width:68px; height:68px; display:grid; place-items:center;"><div style="position:absolute; inset:10px; transform:rotate(45deg); border-radius:10px; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 14px 30px -8px rgba(31,111,255,.6);"></div><span style="position:relative; font-size:16px; font-weight:800; color:#fff;">01</span></div>
+        </div>
+        <div style="padding:60px clamp(24px,5vw,40px) 44px; display:grid; gap:16px;">
+          <h3 style="font-size:26px; line-height:1.2; font-weight:700; letter-spacing:-.015em; color:#0E2A4F;">Reformas integrales de pisos y áticos</h3>
+          <p style="font-size:16px; line-height:1.75; color:#46566E; text-wrap:pretty;">Las reformas de pisos e inmuebles permiten renovar instalaciones, distribución y acabados en un mismo proyecto. Estudiamos cómo utilizas cada espacio para mejorar almacenamiento, iluminación y circulación.</p>
+          <p style="font-size:16px; line-height:1.75; color:#46566E; text-wrap:pretty;">En viviendas recién compradas, planificamos la reforma integral antes de la entrada a vivir, ajustando el alcance a las necesidades de sus propietarios.</p>
+        </div>
+      </article>
+      <article style="position:relative; background:#F2F5F9; border-radius:4px; transition:transform .35s ease, box-shadow .35s ease; box-shadow:0 1px 0 rgba(10,29,56,.04);" data-style-hover="transform:translateY(-6px); box-shadow:0 40px 70px -36px rgba(10,29,56,.35);">
+        <div style="position:relative; aspect-ratio:16/10;">
+          <div style="position:absolute; inset:0; border-radius:4px 4px 0 0; overflow:hidden; color:#7A8AA0;"><img src="assets/img/FOTO-07-costa-del-sol-villa.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></div>
+          <div style="position:absolute; left:32px; bottom:-34px; width:68px; height:68px; display:grid; place-items:center;"><div style="position:absolute; inset:10px; transform:rotate(45deg); border-radius:10px; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 14px 30px -8px rgba(31,111,255,.6);"></div><span style="position:relative; font-size:16px; font-weight:800; color:#fff;">02</span></div>
+        </div>
+        <div style="padding:60px clamp(24px,5vw,40px) 44px; display:grid; gap:16px;">
+          <h3 style="font-size:26px; line-height:1.2; font-weight:700; letter-spacing:-.015em; color:#0E2A4F;">Reformas de casas y villas</h3>
+          <p style="font-size:16px; line-height:1.75; color:#46566E; text-wrap:pretty;">Coordinamos reformas de viviendas unifamiliares, desde el interior hasta las zonas exteriores incluidas en el encargo. Terrazas y áreas de BBQ se valoran por separado dentro del proyecto de tu casa.</p>
+        </div>
+      </article>
+    </div>
+
+    <div style="margin-top:28px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:28px;">
+      <article style="position:relative; background:#F2F5F9; border-radius:4px; transition:transform .35s ease, box-shadow .35s ease;" data-style-hover="transform:translateY(-6px); box-shadow:0 40px 70px -36px rgba(10,29,56,.35);">
+        <div style="position:relative; aspect-ratio:4/3;">
+          <div style="position:absolute; inset:0; border-radius:4px 4px 0 0; overflow:hidden; color:#7A8AA0;"><img src="assets/img/FOTO-08-porcelain-kitchen.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></div>
+          <div style="position:absolute; left:28px; bottom:-30px; width:60px; height:60px; display:grid; place-items:center;"><div style="position:absolute; inset:9px; transform:rotate(45deg); border-radius:9px; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 14px 30px -8px rgba(31,111,255,.6);"></div><span style="position:relative; font-size:15px; font-weight:800; color:#fff;">03</span></div>
+        </div>
+        <div style="padding:54px clamp(24px,5vw,32px) 40px; display:grid; gap:14px;">
+          <h3 style="font-size:23px; line-height:1.2; font-weight:700; letter-spacing:-.015em; color:#0E2A4F;">Reformas de cocinas</h3>
+          <p style="font-size:15.5px; line-height:1.75; color:#46566E; text-wrap:pretty;">Nuestro servicio de reformas de cocinas combina distribución, instalaciones y montaje. Trabajamos con mobiliario de fabricantes colaboradores o soluciones prefabricadas, incorporando encimeras adaptadas al uso diario de la cocina.</p>
+          <p style="font-size:15.5px; line-height:1.75; color:#46566E; text-wrap:pretty;">En este proceso, elegimos con los clientes materiales y equipamiento que aprovechen el espacio disponible y respondan al uso previsto de la cocina.</p>
+        </div>
+      </article>
+      <article style="position:relative; background:#F2F5F9; border-radius:4px; transition:transform .35s ease, box-shadow .35s ease;" data-style-hover="transform:translateY(-6px); box-shadow:0 40px 70px -36px rgba(10,29,56,.35);">
+        <div style="position:relative; aspect-ratio:4/3;">
+          <div style="position:absolute; inset:0; border-radius:4px 4px 0 0; overflow:hidden; color:#7A8AA0;"><img src="assets/img/FOTO-09-spa-bathroom.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></div>
+          <div style="position:absolute; left:28px; bottom:-30px; width:60px; height:60px; display:grid; place-items:center;"><div style="position:absolute; inset:9px; transform:rotate(45deg); border-radius:9px; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 14px 30px -8px rgba(31,111,255,.6);"></div><span style="position:relative; font-size:15px; font-weight:800; color:#fff;">04</span></div>
+        </div>
+        <div style="padding:54px clamp(24px,5vw,32px) 40px; display:grid; gap:14px;">
+          <h3 style="font-size:23px; line-height:1.2; font-weight:700; letter-spacing:-.015em; color:#0E2A4F;">Reformas de baños</h3>
+          <p style="font-size:15.5px; line-height:1.75; color:#46566E; text-wrap:pretty;">Las reformas de baños incluyen, según presupuesto, fontanería, impermeabilización, revestimientos y montaje. Prestamos atención al detalle en pendientes, juntas y encuentros para conseguir baños funcionales y facilitar su mantenimiento.</p>
+        </div>
+      </article>
+      <article style="position:relative; background:#F2F5F9; border-radius:4px; transition:transform .35s ease, box-shadow .35s ease;" data-style-hover="transform:translateY(-6px); box-shadow:0 40px 70px -36px rgba(10,29,56,.35);">
+        <div style="position:relative; aspect-ratio:4/3;">
+          <div style="position:absolute; inset:0; border-radius:4px 4px 0 0; overflow:hidden; color:#7A8AA0;"><img src="assets/img/FOTO-10-renovation-engineering-carpentry.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></div>
+          <div style="position:absolute; left:28px; bottom:-30px; width:60px; height:60px; display:grid; place-items:center;"><div style="position:absolute; inset:9px; transform:rotate(45deg); border-radius:9px; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 14px 30px -8px rgba(31,111,255,.6);"></div><span style="position:relative; font-size:15px; font-weight:800; color:#fff;">05</span></div>
+        </div>
+        <div style="padding:54px clamp(24px,5vw,32px) 40px; display:grid; gap:14px;">
+          <h3 style="font-size:23px; line-height:1.2; font-weight:700; letter-spacing:-.015em; color:#0E2A4F;">Albañilería, instalaciones y carpintería</h3>
+          <p style="font-size:15.5px; line-height:1.75; color:#46566E; text-wrap:pretty;">Una reforma integral puede comprender demoliciones, retirada de escombros, albañilería, fontanería, electricidad y carpintería. La redistribución se estudia según las condiciones técnicas del inmueble.</p>
+          <p style="font-size:15.5px; line-height:1.75; color:#46566E; text-wrap:pretty;">Renovamos las instalaciones previstas en el proyecto conforme a los requisitos aplicables. Coordinamos las reformas con profesionales de distintos oficios para preparar cada fase antes de cerrar paredes o colocar revestimientos.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05-proceso · Proceso ===== -->
+<section id="proceso" data-screen-label="04 Proceso" style="position:relative; background:#0A1D38; color:#fff; padding:clamp(80px,12.5vw,180px) 0;">
+  <div style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+    <div style="position:absolute; inset:0; opacity:.14; pointer-events:auto; color:#7CD6F9;"><img src="assets/img/BG-02-architectural-blueprint.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(10,29,56,.9) 0%, rgba(10,29,56,.35) 100%);"></div>
+    <div style="position:absolute; right:-230px; top:6%; width:520px; aspect-ratio:1; transform:rotate(45deg); border-radius:10%; border:2px solid rgba(124,214,249,.2);"></div>
+    <div style="position:absolute; right:-150px; top:14%; width:360px; aspect-ratio:1; transform:rotate(45deg); border-radius:10%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); opacity:.22; filter:blur(6px);"></div>
+    <div style="position:absolute; right:12%; bottom:-60px; width:140px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; background:#1F6FFF; opacity:.35;"></div>
+    
+      <div style="position:absolute; right:2%; top:7%; width:280px; height:230px; pointer-events:auto; color:#7CD6F9;" data-show="desktop &gt;1080px" data-decor=""><img src="assets/img/PNG-03-architect-tools.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block;"></div>
+    
+  </div>
+  <div style="position:relative; z-index:1; max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px);">
+    <div style="max-width:720px;">
+      <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#7CD6F9;"><span style="width:22px; height:2px; background:linear-gradient(90deg,#4B95FF,#7CD6F9);"></span>Proceso</div>
+      <h2 style="margin-top:24px; font-size:clamp(34px,3.7vw,56px); line-height:1.06; font-weight:800; letter-spacing:-.025em; color:#fff; text-wrap:balance;">Cómo organizamos <span style="background:linear-gradient(95deg,#4B95FF,#7CD6F9); -webkit-background-clip:text; background-clip:text; color:transparent;">tu reforma integral</span></h2>
+      <p style="margin-top:28px; font-size:17px; line-height:1.75; color:#C3D1E4; max-width:600px; text-wrap:pretty;">Nuestro proceso de reformas ordena decisiones, compras y ejecución. Los clientes conocen el alcance de la obra y los puntos que necesitan su aprobación.</p>
+    </div>
+
+    <div style="margin-top:clamp(72px,8vw,112px); display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:56px 40px;" data-responsive="grid: 4 cols &gt;1080px | 2 cols 641–1080px | 1 col ≤640px">
+      <div style="position:relative;">
+        <div style="position:absolute; left:92px; right:-40px; top:39px; height:2px; background:linear-gradient(90deg,#4B95FF,rgba(124,214,249,.15));" data-show="desktop &gt;1080px"></div>
+        <div style="position:relative; width:80px; height:80px; display:grid; place-items:center;"><div style="position:absolute; inset:12px; transform:rotate(45deg); border-radius:12px; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 20px 40px -12px rgba(31,111,255,.8);"></div><span style="position:relative; font-size:18px; font-weight:800; color:#fff;">01</span></div>
+        <h3 style="margin-top:36px; font-size:23px; line-height:1.2; font-weight:700; color:#fff;">Visita y planificación</h3>
+        <p style="margin-top:16px; font-size:15.5px; line-height:1.75; color:#AFC0D7; text-wrap:pretty;">Recogemos tus necesidades, medimos el inmueble y preparamos un planteamiento inicial. En esta fase de las reformas estudiamos distribución, estado de las viviendas y prioridades del proyecto.</p>
+      </div>
+      <div style="position:relative;">
+        <div style="position:absolute; left:92px; right:-40px; top:39px; height:2px; background:linear-gradient(90deg,#4B95FF,rgba(124,214,249,.15));" data-show="desktop &gt;1080px"></div>
+        <div style="position:relative; width:80px; height:80px; display:grid; place-items:center;"><div style="position:absolute; inset:12px; transform:rotate(45deg); border-radius:12px; background:#0F2A4D; border:2px solid #4B95FF;"></div><span style="position:relative; font-size:18px; font-weight:800; color:#fff;">02</span></div>
+        <h3 style="margin-top:36px; font-size:23px; line-height:1.2; font-weight:700; color:#fff;">Presupuesto y contrato</h3>
+        <p style="margin-top:16px; font-size:15.5px; line-height:1.75; color:#AFC0D7; text-wrap:pretty;">El presupuesto de reformas detalla trabajos, materiales, mano de obra y partidas acordadas. Formalizamos las condiciones mediante contrato y emitimos facturas a través de nuestra empresa.</p>
+        <p style="margin-top:14px; font-size:15.5px; line-height:1.75; color:#AFC0D7; text-wrap:pretty;">Recomendamos comparar varios presupuestos con el mismo alcance: una diferencia de precio puede responder a suministros o trabajos que una propuesta no incluye.</p>
+      </div>
+      <div style="position:relative;">
+        <div style="position:absolute; left:92px; right:-40px; top:39px; height:2px; background:linear-gradient(90deg,#4B95FF,rgba(124,214,249,.15));" data-show="desktop &gt;1080px"></div>
+        <div style="position:relative; width:80px; height:80px; display:grid; place-items:center;"><div style="position:absolute; inset:12px; transform:rotate(45deg); border-radius:12px; background:#0F2A4D; border:2px solid #4B95FF;"></div><span style="position:relative; font-size:18px; font-weight:800; color:#fff;">03</span></div>
+        <h3 style="margin-top:36px; font-size:23px; line-height:1.2; font-weight:700; color:#fff;">Ejecución y control de obra</h3>
+        <p style="margin-top:16px; font-size:15.5px; line-height:1.75; color:#AFC0D7; text-wrap:pretty;">Organizamos compras, entregas y coordinación de gremios durante las reformas. Confirmamos los plazos de obra según disponibilidad del equipo, definición técnica y suministros.</p>
+        <p style="margin-top:14px; font-size:15.5px; line-height:1.75; color:#AFC0D7; text-wrap:pretty;">Si aparecen imprevistos, explicamos las soluciones y acordamos los cambios antes de ejecutarlos. Nuestro compromiso con la transparencia incluye actualizar el presupuesto cuando cambia el alcance de la obra.</p>
+      </div>
+      <div style="position:relative;">
+        <div style="position:relative; width:80px; height:80px; display:grid; place-items:center;"><div style="position:absolute; inset:12px; transform:rotate(45deg); border-radius:12px; background:#0F2A4D; border:2px solid #7CD6F9;"></div><svg style="position:relative;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></div>
+        <h3 style="margin-top:36px; font-size:23px; line-height:1.2; font-weight:700; color:#fff;">Revisión y entrega</h3>
+        <p style="margin-top:16px; font-size:15.5px; line-height:1.75; color:#AFC0D7; text-wrap:pretty;">Al finalizar las reformas revisamos los trabajos y las instalaciones con el cliente. Registramos las observaciones que deban resolverse y formalizamos la finalización conforme al contrato.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06-precios · Precios + calculator + examples table ===== -->
+<section id="precios" data-screen-label="05 Precios" style="position:relative; background:#fff; padding:clamp(80px,12.5vw,180px) 0;">
+  <div style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+    <div style="position:absolute; left:0; right:0; top:52%; bottom:0; background:#F2F5F9;"></div>
+    <div style="position:absolute; left:-200px; top:10%; width:400px; aspect-ratio:1; transform:rotate(45deg); border-radius:10%; background:#E4EEFB;"></div>
+    <div style="position:absolute; left:-110px; top:23%; width:220px; aspect-ratio:1; transform:rotate(45deg); border-radius:12%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 40px 70px -20px rgba(31,111,255,.45);"></div>
+    <div style="position:absolute; right:-160px; top:60%; width:380px; aspect-ratio:1; transform:rotate(45deg); border-radius:10%; border:2px solid #CFE4FF;"></div>
+    
+      <div style="position:absolute; left:1%; top:56%; width:250px; height:250px; pointer-events:auto; color:#7A8AA0;" data-show="desktop &gt;1080px" data-decor=""><img src="assets/img/PNG-06-rolled-blueprints-tape.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block;"></div>
+    
+  </div>
+  <div style="position:relative; z-index:1; max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px);">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr)); gap:32px 80px; align-items:end;">
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#1667E0;"><span style="width:22px; height:2px; background:linear-gradient(90deg,#1F6FFF,#5EC4F8);"></span>Precios</div>
+        <h2 style="margin-top:24px; font-size:clamp(34px,3.7vw,56px); line-height:1.06; font-weight:800; letter-spacing:-.025em; color:#0E2A4F; text-wrap:balance;">Precio de una reforma integral <span style="background:linear-gradient(95deg,#1F6FFF,#3FA0F7); -webkit-background-clip:text; background-clip:text; color:transparent;">en Málaga</span></h2>
+      </div>
+      <div style="display:grid; gap:18px; max-width:540px;">
+        <p style="font-size:17px; line-height:1.75; color:#33435B; text-wrap:pretty;">En MiRenova, el precio orientativo de una reforma integral es de 800–1.000 €/m² en gama básica, 1.000–1.300 €/m² en confort y 1.300–2.000 €/m² en premium, sin IVA.</p>
+        <p style="font-size:16px; line-height:1.75; color:#5A6A82; text-wrap:pretty;">Para nuestras reformas en Málaga, el presupuesto definitivo depende del estado del inmueble, la calidad de los materiales y la complejidad del proyecto. En viviendas, el cálculo se aplica a la superficie interior que se reforma.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(72px,8vw,110px); display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; align-items:center;" data-responsive="grid: 3 cols &gt;760px | 1 col ≤760px">
+      <div style="background:#F2F5F9; border-radius:4px; padding:48px 40px;">
+        <div style="font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#1667E0;">Gama básica</div>
+        <div style="margin-top:22px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;"><span style="font-size:clamp(36px,3.4vw,46px); font-weight:800; letter-spacing:-.03em; color:#0E2A4F;">800–1.000</span><span style="font-size:17px; font-weight:600; color:#46566E;">€/m²</span></div>
+        <div style="margin-top:12px; font-size:14px; color:#5A6A82;">sin IVA</div>
+      </div>
+      <div style="position:relative; overflow:hidden; background:#0E2A4F; border-radius:4px; padding:64px 40px; box-shadow:0 50px 80px -36px rgba(10,29,56,.6);">
+        <div style="position:absolute; right:-60px; top:-60px; width:150px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8);"></div>
+        <div style="position:absolute; right:30px; bottom:-50px; width:90px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; border:2px solid rgba(124,214,249,.3);"></div>
+        <div style="position:relative; font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#7CD6F9;">Confort</div>
+        <div style="position:relative; margin-top:22px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;"><span style="font-size:clamp(36px,3.4vw,46px); font-weight:800; letter-spacing:-.03em; color:#fff;">1.000–1.300</span><span style="font-size:17px; font-weight:600; color:#C3D1E4;">€/m²</span></div>
+        <div style="position:relative; margin-top:12px; font-size:14px; color:#AFC0D7;">sin IVA</div>
+      </div>
+      <div style="background:#F2F5F9; border-radius:4px; padding:48px 40px;">
+        <div style="font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#1667E0;">Premium</div>
+        <div style="margin-top:22px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;"><span style="font-size:clamp(36px,3.4vw,46px); font-weight:800; letter-spacing:-.03em; color:#0E2A4F;">1.300–2.000</span><span style="font-size:17px; font-weight:600; color:#46566E;">€/m²</span></div>
+        <div style="margin-top:12px; font-size:14px; color:#5A6A82;">sin IVA</div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr)); gap:24px; align-items:stretch;">
+      
+        <div style="background:#fff; border-radius:4px; padding:clamp(32px,5vw,44px) clamp(22px,5vw,40px); box-shadow:0 40px 80px -40px rgba(10,29,56,.35), 0 0 0 1px #E3E9F1;">
+          <h3 style="font-size:22px; font-weight:700; color:#0E2A4F;">Calcula tu reforma</h3>
+          <div style="margin-top:30px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
+            <span style="font-size:14px; font-weight:600; color:#46566E;">Superficie interior</span>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <button aria-label="Menos 5 m²" style="width:38px; height:38px; display:grid; place-items:center; border:1px solid #D5DEE9; border-radius:3px; background:#fff; color:#0E2A4F; cursor:pointer; transition:border-color .2s, color .2s;" data-on-click="m2Minus" data-style-hover="border-color:#1F7BFF; color:#1F7BFF;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path></svg></button>
+              <span style="min-width:100px; text-align:center; font-size:22px; font-weight:800; letter-spacing:-.01em; color:#0E2A4F;">80 m²</span>
+              <button aria-label="Más 5 m²" style="width:38px; height:38px; display:grid; place-items:center; border:1px solid #D5DEE9; border-radius:3px; background:#fff; color:#0E2A4F; cursor:pointer; transition:border-color .2s, color .2s;" data-on-click="m2Plus" data-style-hover="border-color:#1F7BFF; color:#1F7BFF;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
+            </div>
+          </div>
+          <div style="position:relative; margin-top:22px; height:30px;">
+            <div style="position:absolute; left:0; right:0; top:50%; height:6px; margin-top:-3px; border-radius:3px; background:#E3E9F1;"></div>
+            <div style="position:absolute; left:0; top:50%; height:6px; margin-top:-3px; border-radius:3px; width:22.73%; background:linear-gradient(90deg,#1F6FFF,#5EC4F8);" data-responsive="runtime: (m2-30)/220*100"></div>
+            <div style="position:absolute; top:50%; left:22.73%; width:22px; height:22px; margin:-11px 0 0 -11px; transform:rotate(45deg); border-radius:5px; background:#fff; border:3px solid #1F7BFF; box-shadow:0 8px 18px -6px rgba(31,123,255,.65); pointer-events:none;" data-responsive="runtime: (m2-30)/220*100"></div>
+            <input type="range" min="30" max="250" step="5" value="80" aria-label="Superficie interior" style="position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:pointer;" data-responsive="runtime: calculator area (30–250, step 5)" data-on-change="onM2">
+          </div>
+          <div style="margin-top:8px; display:flex; justify-content:space-between; font-size:12px; color:#7A8AA0;"><span>30 m²</span><span>250 m²</span></div>
+          <div style="margin-top:28px; font-size:14px; font-weight:600; color:#46566E;">Gama</div>
+          <div style="margin-top:12px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:4px; padding:4px; border-radius:4px; background:#F2F5F9;" data-responsive="grid: 3 cols &gt;480px | 1 col ≤480px">
+            
+              <button style="display:grid; gap:5px; justify-items:start; padding:12px 14px; border:0; border-radius:3px; background:transparent; box-shadow:none; color:#0E2A4F; font-family:inherit; text-align:left; cursor:pointer; transition:background .2s, color .2s, box-shadow .2s;" data-tier="0" data-on-click="pick">
+                <span style="display:flex; align-items:center; gap:8px; font-size:14px; font-weight:700;"><span style="flex:none; width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#C9D6E6;"></span>Básica</span>
+                <span style="font-size:12px; font-weight:500; color:#7A8AA0;">800–1.000 €/m²</span>
+              </button>
+            
+              <button style="display:grid; gap:5px; justify-items:start; padding:12px 14px; border:0; border-radius:3px; background:#0E2A4F; box-shadow:0 12px 24px -12px rgba(10,29,56,.6); color:#FFFFFF; font-family:inherit; text-align:left; cursor:pointer; transition:background .2s, color .2s, box-shadow .2s;" data-tier="1" data-on-click="pick">
+                <span style="display:flex; align-items:center; gap:8px; font-size:14px; font-weight:700;"><span style="flex:none; width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:linear-gradient(135deg,#1F6FFF,#5EC4F8);"></span>Confort</span>
+                <span style="font-size:12px; font-weight:500; color:#7CD6F9;">1.000–1.300 €/m²</span>
+              </button>
+            
+              <button style="display:grid; gap:5px; justify-items:start; padding:12px 14px; border:0; border-radius:3px; background:transparent; box-shadow:none; color:#0E2A4F; font-family:inherit; text-align:left; cursor:pointer; transition:background .2s, color .2s, box-shadow .2s;" data-tier="2" data-on-click="pick">
+                <span style="display:flex; align-items:center; gap:8px; font-size:14px; font-weight:700;"><span style="flex:none; width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#C9D6E6;"></span>Premium</span>
+                <span style="font-size:12px; font-weight:500; color:#7A8AA0;">1.300–2.000 €/m²</span>
+              </button>
+            
+          </div>
+          <div style="margin-top:28px; padding:clamp(20px,5vw,28px); border-radius:4px; background:linear-gradient(120deg,#0E2A4F,#13366A); color:#fff; position:relative; overflow:hidden;">
+            <div style="position:absolute; right:-40px; bottom:-40px; width:120px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); opacity:.5;"></div>
+            <div style="position:relative; font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#7CD6F9;">Estimación orientativa · 1.000–1.300 €/m²</div>
+            <div style="position:relative; margin-top:12px; font-size:clamp(26px,2.6vw,34px); font-weight:800; letter-spacing:-.02em;">80.000 – 104.000 €</div>
+            <div style="position:relative; margin-top:6px; font-size:14px; color:#AFC0D7;">sin IVA</div>
+          </div>
+        </div>
+      
+      <div style="background:#fff; border-radius:4px; padding:clamp(32px,5vw,44px) clamp(22px,5vw,40px); box-shadow:0 40px 80px -40px rgba(10,29,56,.35), 0 0 0 1px #E3E9F1;">
+        <h3 style="font-size:22px; font-weight:700; color:#0E2A4F;">Ejemplos de presupuesto para un piso</h3>
+        <div style="margin-top:28px; overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; font-size:15px; min-width:420px;">
+            <thead>
+              <tr style="background:#F2F5F9;">
+                <th style="text-align:left; padding:16px 18px; font-weight:700; color:#0E2A4F;">Superficie</th>
+                <th style="text-align:left; padding:16px 18px; font-weight:700; color:#0E2A4F;">Confort: 1.000–1.300 €/m²</th>
+                <th style="text-align:left; padding:16px 18px; font-weight:700; color:#0E2A4F;">Premium: 1.300–2.000 €/m²</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #E3E9F1;"><td style="padding:18px; font-weight:600; color:#0E2A4F;">Piso de 60 m²</td><td style="padding:18px; color:#33435B;">60.000–78.000 €</td><td style="padding:18px; color:#33435B;">78.000–120.000 €</td></tr>
+              <tr style="border-bottom:1px solid #E3E9F1;"><td style="padding:18px; font-weight:600; color:#0E2A4F;">Piso de 70 m²</td><td style="padding:18px; color:#33435B;">70.000–91.000 €</td><td style="padding:18px; color:#33435B;">91.000–140.000 €</td></tr>
+              <tr><td style="padding:18px; font-weight:600; color:#0E2A4F;">Piso de 100 m²</td><td style="padding:18px; color:#33435B;">100.000–130.000 €</td><td style="padding:18px; color:#33435B;">130.000–200.000 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:24px; font-size:14px; line-height:1.7; color:#5A6A82; text-wrap:pretty;">Son ejemplos calculados, no ofertas cerradas. Todos los importes excluyen IVA; la configuración de cada reforma integral se concreta tras la visita.</p>
+      </div>
+    </div>
+
+    <div style="position:relative; overflow:hidden; margin-top:24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:24px 56px; align-items:start; background:#0E2A4F; border-radius:4px; padding:clamp(44px,5vw,72px) clamp(36px,4vw,56px); box-shadow:0 50px 80px -40px rgba(10,29,56,.55);">
+      <img src="assets/img/FOTO-04-porcelain-tile-quality-check.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block;">
+      <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(10,29,56,.62) 0%, rgba(10,29,56,.8) 45%, rgba(10,29,56,.93) 100%);"></div>
+      <div style="position:absolute; right:-70px; bottom:-70px; width:180px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; border:2px solid rgba(124,214,249,.25);"></div>
+      <h3 style="position:relative; font-size:clamp(26px,2.4vw,34px); line-height:1.15; font-weight:800; letter-spacing:-.02em; color:#fff; text-wrap:balance; max-width:420px;">Qué influye en el precio de las reformas</h3>
+      <div style="position:relative; display:grid; gap:16px;">
+        <p style="font-size:16px; line-height:1.75; color:#D5E0EE; text-wrap:pretty;">En las reformas influyen demoliciones, instalaciones, acceso, materiales y equipamiento. La cocina y los baños requieren valorar tanto superficies como conexiones y montaje; su precio no depende únicamente de los metros cuadrados.</p>
+        <p style="font-size:16px; line-height:1.75; color:#D5E0EE; text-wrap:pretty;">El presupuesto debe contemplar posibles imprevistos. La colocación de baldosas se calcula según superficie, formato, preparación del soporte y dificultad, sin una tarifa máxima universal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07-zonas · Zonas ===== -->
+<section id="zonas" data-screen-label="06 Zonas" style="position:relative; background:#0A1D38; color:#fff; padding:clamp(80px,12.5vw,180px) 0;">
+  <div style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+    <div style="position:absolute; inset:0; pointer-events:auto; color:#7CD6F9;"><img src="assets/img/BG-03-malaga-aerial-coast.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(10,29,56,.97) 0%, rgba(10,29,56,.86) 45%, rgba(10,29,56,.55) 100%);"></div>
+    <div style="position:absolute; right:-180px; bottom:-140px; width:460px; aspect-ratio:1; transform:rotate(45deg); border-radius:10%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); opacity:.3;"></div>
+    <div style="position:absolute; right:22%; top:-90px; width:200px; aspect-ratio:1; transform:rotate(45deg); border-radius:12%; border:2px solid rgba(124,214,249,.25);"></div>
+    
+      <div style="position:absolute; right:-1%; top:-2%; width:300px; height:300px; pointer-events:auto; color:#7CD6F9;" data-show="desktop &gt;1080px" data-decor=""><img src="assets/img/PNG-07-palm-leaves-corner.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block;"></div>
+    
+  </div>
+  <div style="position:relative; z-index:1; max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr)); gap:clamp(56px,7vw,100px); align-items:center;">
+    <div style="max-width:560px;">
+      <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#7CD6F9;"><span style="width:22px; height:2px; background:linear-gradient(90deg,#4B95FF,#7CD6F9);"></span>Zonas</div>
+      <h2 style="margin-top:24px; font-size:clamp(34px,3.7vw,56px); line-height:1.06; font-weight:800; letter-spacing:-.025em; color:#fff; text-wrap:balance;">Reformas <span style="background:linear-gradient(95deg,#4B95FF,#7CD6F9); -webkit-background-clip:text; background-clip:text; color:transparent;">en Málaga</span> y provincia</h2>
+      <div style="margin-top:32px; display:grid; gap:20px;">
+        <p style="font-size:17px; line-height:1.75; color:#C3D1E4; text-wrap:pretty;">Realizamos reformas de viviendas en Málaga, incluidos Centro, Soho, La Malagueta, El Limonar, Pedregalejo y El Palo. Nuestra empresa organiza las visitas desde su base en Málaga.</p>
+        <p style="font-size:17px; line-height:1.75; color:#C3D1E4; text-wrap:pretty;">También ofrecemos reformas en Torremolinos, Benalmádena, Fuengirola, Mijas y Marbella, además de Alhaurín de la Torre y Rincón de la Victoria. Para otras localidades de la provincia y la Costa del Sol, valoramos volumen, desplazamiento y disponibilidad.</p>
+      </div>
+    </div>
+    <div style="display:grid; gap:20px;">
+      <div style="background:rgba(15,42,77,.62); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid rgba(124,214,249,.18); border-radius:4px; padding:clamp(24px,5vw,36px); box-shadow:0 40px 80px -40px rgba(0,0,0,.6);">
+        <div style="font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#7CD6F9;">Málaga</div>
+        <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:10px;">
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Centro</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Soho</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>La Malagueta</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>El Limonar</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Pedregalejo</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>El Palo</span>
+        </div>
+      </div>
+      <div style="background:rgba(15,42,77,.62); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid rgba(124,214,249,.18); border-radius:4px; padding:clamp(24px,5vw,36px); box-shadow:0 40px 80px -40px rgba(0,0,0,.6);">
+        <div style="font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#7CD6F9;">Costa del Sol y provincia</div>
+        <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:10px;">
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Torremolinos</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Benalmádena</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Fuengirola</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Mijas</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Marbella</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Alhaurín de la Torre</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border:1px solid rgba(124,214,249,.3); border-radius:3px; font-size:15px; font-weight:500; color:#fff;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Rincón de la Victoria</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08-faq · Preguntas (FAQ accordion) ===== -->
+<section id="faq" data-screen-label="07 Preguntas" style="position:relative; background:#fff; padding:clamp(80px,12.5vw,180px) 0;">
+  <div style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+    <div style="position:absolute; inset:0; background:url(assets/img/EXTRA-02-olive-window-shadow.webp) right top / cover no-repeat; mix-blend-mode:multiply; opacity:.3;"></div>
+    <div style="position:absolute; left:-240px; top:44%; width:480px; aspect-ratio:1; transform:rotate(45deg); border-radius:10%; background:#F2F5F9;"></div>
+    <div style="position:absolute; left:-80px; top:70%; width:170px; aspect-ratio:1; transform:rotate(45deg); border-radius:12%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 40px 70px -20px rgba(31,111,255,.45);"></div>
+    <div style="position:absolute; right:-120px; top:-100px; width:300px; aspect-ratio:1; transform:rotate(45deg); border-radius:12%; border:2px solid #CFE4FF;"></div>
+  </div>
+  <div style="position:relative; z-index:1; max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr)); gap:clamp(48px,6vw,96px); align-items:start;">
+    <div style="position:sticky; top:120px; max-width:440px;" data-responsive="position: sticky &gt;1080px | static ≤1080px">
+      <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#1667E0;"><span style="width:22px; height:2px; background:linear-gradient(90deg,#1F6FFF,#5EC4F8);"></span>Preguntas</div>
+      <h2 style="margin-top:24px; font-size:clamp(34px,3.7vw,56px); line-height:1.06; font-weight:800; letter-spacing:-.025em; color:#0E2A4F; text-wrap:balance;">Preguntas sobre <span style="background:linear-gradient(95deg,#1F6FFF,#3FA0F7); -webkit-background-clip:text; background-clip:text; color:transparent;">nuestras reformas</span></h2>
+      
+        <div style="position:relative; margin-top:48px; width:100%; max-width:300px; aspect-ratio:1;" data-show="desktop &gt;1080px" data-decor=""><img src="assets/img/PNG-05-keys-mirenova-keychain.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block;"></div>
+      
+    </div>
+    <div style="border-top:1px solid #E3E9F1; grid-column:span 1;">
+      <div style="border-bottom:1px solid #E3E9F1;">
+        <button style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:clamp(22px,3vw,30px) 0; background:none; border:0; text-align:left; cursor:pointer; font-family:inherit; font-size:clamp(17px,2vw,20px); font-weight:600; line-height:1.35; color:#0E2A4F;" data-on-click="t0" data-style-hover="color:#1667E0;">¿Qué incluye el servicio llave en mano?<span style="flex:none; position:relative; width:40px; height:40px; display:grid; place-items:center;"><span style="position:absolute; inset:6px; transform:rotate(45deg); border-radius:7px; background:#E4EEFB;"></span><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-closed="0" hidden=""><path d="M5 12h14"></path><path d="M12 5v14"></path></svg><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-open="0"><path d="M5 12h14"></path></svg></span></button>
+        <div style="padding:0 clamp(0px,5vw,64px) 32px 0;" data-faq-open="0"><p style="font-size:16px; line-height:1.75; color:#46566E; text-wrap:pretty;">Una reforma integral llave en mano reúne planificación, compras, coordinación y trabajos contratados. En nuestras reformas en Málaga, diseño, mobiliario y equipamiento se incluyen según el presupuesto aprobado.</p></div>
+      </div>
+      <div style="border-bottom:1px solid #E3E9F1;">
+        <button style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:clamp(22px,3vw,30px) 0; background:none; border:0; text-align:left; cursor:pointer; font-family:inherit; font-size:clamp(17px,2vw,20px); font-weight:600; line-height:1.35; color:#0E2A4F;" data-on-click="t1" data-style-hover="color:#1667E0;">¿Quién tramita los permisos de obra?<span style="flex:none; position:relative; width:40px; height:40px; display:grid; place-items:center;"><span style="position:absolute; inset:6px; transform:rotate(45deg); border-radius:7px; background:#E4EEFB;"></span><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-closed="1"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-open="1" hidden=""><path d="M5 12h14"></path></svg></span></button>
+        <div style="padding:0 clamp(0px,5vw,64px) 32px 0;" data-faq-open="1" hidden=""><p style="font-size:16px; line-height:1.75; color:#46566E; text-wrap:pretty;">El trámite municipal depende de la intervención; puede corresponder una licencia o declaración responsable. Puedes gestionarlo directamente o contratar nuestro servicio de acompañamiento administrativo y jurídico, con coste separado.</p></div>
+      </div>
+      <div style="border-bottom:1px solid #E3E9F1;">
+        <button style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:clamp(22px,3vw,30px) 0; background:none; border:0; text-align:left; cursor:pointer; font-family:inherit; font-size:clamp(17px,2vw,20px); font-weight:600; line-height:1.35; color:#0E2A4F;" data-on-click="t2" data-style-hover="color:#1667E0;">¿Qué garantías tienen las reformas?<span style="flex:none; position:relative; width:40px; height:40px; display:grid; place-items:center;"><span style="position:absolute; inset:6px; transform:rotate(45deg); border-radius:7px; background:#E4EEFB;"></span><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-closed="2"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-open="2" hidden=""><path d="M5 12h14"></path></svg></span></button>
+        <div style="padding:0 clamp(0px,5vw,64px) 32px 0; display:grid; gap:14px;" data-faq-open="2" hidden=""><p style="font-size:16px; line-height:1.75; color:#46566E; text-wrap:pretty;">Nuestra empresa de reformas dispone de seguro de responsabilidad civil. Ofrecemos tres años de garantía sobre nuestros trabajos de fontanería, electricidad e impermeabilización, con alcance y procedimiento recogidos en contrato, sin limitar los derechos legales del cliente.</p><p style="font-size:16px; line-height:1.75; color:#46566E; text-wrap:pretty;">Las garantías de los equipos se distinguen de las correspondientes a los trabajos. El servicio posterior a la entrega permite comunicar incidencias y valorar su resolución con nuestros profesionales.</p></div>
+      </div>
+      <div style="border-bottom:1px solid #E3E9F1;">
+        <button style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:clamp(22px,3vw,30px) 0; background:none; border:0; text-align:left; cursor:pointer; font-family:inherit; font-size:clamp(17px,2vw,20px); font-weight:600; line-height:1.35; color:#0E2A4F;" data-on-click="t3" data-style-hover="color:#1667E0;">¿Cuánto tarda una reforma integral en Málaga?<span style="flex:none; position:relative; width:40px; height:40px; display:grid; place-items:center;"><span style="position:absolute; inset:6px; transform:rotate(45deg); border-radius:7px; background:#E4EEFB;"></span><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-closed="3"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-open="3" hidden=""><path d="M5 12h14"></path></svg></span></button>
+        <div style="padding:0 clamp(0px,5vw,64px) 32px 0;" data-faq-open="3" hidden=""><p style="font-size:16px; line-height:1.75; color:#46566E; text-wrap:pretty;">La duración de las reformas depende del alcance, los suministros y las condiciones de obra. Acordamos los plazos para cada proyecto, sin prometer una duración idéntica para todas las viviendas.</p></div>
+      </div>
+      <div style="border-bottom:1px solid #E3E9F1;">
+        <button style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:clamp(22px,3vw,30px) 0; background:none; border:0; text-align:left; cursor:pointer; font-family:inherit; font-size:clamp(17px,2vw,20px); font-weight:600; line-height:1.35; color:#0E2A4F;" data-on-click="t4" data-style-hover="color:#1667E0;">¿Ofrecéis reformas para clientes internacionales?<span style="flex:none; position:relative; width:40px; height:40px; display:grid; place-items:center;"><span style="position:absolute; inset:6px; transform:rotate(45deg); border-radius:7px; background:#E4EEFB;"></span><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-closed="4"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-open="4" hidden=""><path d="M5 12h14"></path></svg></span></button>
+        <div style="padding:0 clamp(0px,5vw,64px) 32px 0;" data-faq-open="4" hidden=""><p style="font-size:16px; line-height:1.75; color:#46566E; text-wrap:pretty;">Ofrecemos consultas y presupuestos en español, inglés y ruso; los contratos se redactan en español. Si resides fuera, podemos acordar un sistema de comunicación y seguimiento antes de contratar las reformas.</p></div>
+      </div>
+      <div style="border-bottom:1px solid #E3E9F1;">
+        <button style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:clamp(22px,3vw,30px) 0; background:none; border:0; text-align:left; cursor:pointer; font-family:inherit; font-size:clamp(17px,2vw,20px); font-weight:600; line-height:1.35; color:#0E2A4F;" data-on-click="t5" data-style-hover="color:#1667E0;">¿Aceptáis pequeñas reparaciones o reformas parciales?<span style="flex:none; position:relative; width:40px; height:40px; display:grid; place-items:center;"><span style="position:absolute; inset:6px; transform:rotate(45deg); border-radius:7px; background:#E4EEFB;"></span><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-closed="5"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-open="5" hidden=""><path d="M5 12h14"></path></svg></span></button>
+        <div style="padding:0 clamp(0px,5vw,64px) 32px 0;" data-faq-open="5" hidden=""><p style="font-size:16px; line-height:1.75; color:#46566E; text-wrap:pretty;">Nuestro servicio se centra en reformas completas de viviendas, cocinas y baños. No ofrecemos pequeñas reparaciones domésticas sueltas. Definimos la calidad y el alcance de la obra para que el resultado corresponda a lo acordado.</p></div>
+      </div>
+      <div style="border-bottom:1px solid #E3E9F1;">
+        <button style="width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px; padding:clamp(22px,3vw,30px) 0; background:none; border:0; text-align:left; cursor:pointer; font-family:inherit; font-size:clamp(17px,2vw,20px); font-weight:600; line-height:1.35; color:#0E2A4F;" data-on-click="t6" data-style-hover="color:#1667E0;">¿Cómo elegir una empresa de reformas?<span style="flex:none; position:relative; width:40px; height:40px; display:grid; place-items:center;"><span style="position:absolute; inset:6px; transform:rotate(45deg); border-radius:7px; background:#E4EEFB;"></span><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-closed="6"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg><svg style="position:relative;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1667E0" stroke-width="2.6" stroke-linecap="round" data-faq-open="6" hidden=""><path d="M5 12h14"></path></svg></span></button>
+        <div style="padding:0 clamp(0px,5vw,64px) 32px 0;" data-faq-open="6" hidden=""><p style="font-size:16px; line-height:1.75; color:#46566E; text-wrap:pretty;">Comprueba identidad fiscal, seguro, experiencia y trabajos relacionados con tu reforma integral. Revisa presupuesto, exclusiones, pagos y garantías. La profesionalidad también se aprecia en cómo se explican las condiciones y se responden las dudas de los clientes.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 09-contacto · Contacto + form ===== -->
+<section id="contacto" data-screen-label="08 Contacto" style="position:relative; background:#0A1D38; color:#fff; padding:clamp(80px,12.5vw,180px) 0;">
+  <div style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+    <div style="position:absolute; inset:0; opacity:.18; pointer-events:auto; color:#7CD6F9;"><img src="assets/img/BG-04-contact-light-interior.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></div>
+    <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 85% 50%, rgba(31,111,255,.25), transparent 60%);"></div>
+    <img src="assets/img/EXTRA-01-blue-frosted-glass-diamond.webp" alt="" style="position:absolute; right:-300px; top:calc(12% - 110px); width:760px; height:auto; opacity:.12; filter:saturate(.6);">
+    <div style="position:absolute; right:12%; top:-120px; width:260px; aspect-ratio:1; transform:rotate(45deg); border-radius:12%; border:2px solid rgba(124,214,249,.25);"></div>
+    <div style="position:absolute; left:-80px; bottom:-80px; width:200px; aspect-ratio:1; transform:rotate(45deg); border-radius:12%; background:#0F2A4D;"></div>
+  </div>
+  <div style="position:relative; z-index:1; max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr)); gap:clamp(56px,7vw,100px); align-items:center;">
+    <div style="max-width:540px;">
+      <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#7CD6F9;"><span style="width:22px; height:2px; background:linear-gradient(90deg,#4B95FF,#7CD6F9);"></span>Contacto</div>
+      <h2 style="margin-top:24px; font-size:clamp(34px,3.7vw,56px); line-height:1.06; font-weight:800; letter-spacing:-.025em; color:#fff; text-wrap:balance;"><span style="background:linear-gradient(95deg,#4B95FF,#7CD6F9); -webkit-background-clip:text; background-clip:text; color:transparent;">Solicita presupuesto</span> para tu reforma en Málaga</h2>
+      <p style="margin-top:28px; font-size:17px; line-height:1.75; color:#C3D1E4; text-wrap:pretty;">Cuéntanos dónde está tu vivienda, su superficie y qué reformas necesitas. Estudiaremos las opciones para renovar tu hogar con un presupuesto ajustado al alcance y un compromiso claro sobre los trabajos acordados.</p>
+      <div style="margin-top:48px; display:grid; gap:24px;">
+        <a href="tel:+34652469039" style="display:flex; align-items:center; gap:20px; color:#fff;" data-style-hover="color:#7CD6F9;">
+          <span style="flex:none; position:relative; width:52px; height:52px; display:grid; place-items:center;"><span style="position:absolute; inset:8px; transform:rotate(45deg); border-radius:8px; background:#13366A; border:1px solid rgba(124,214,249,.35);"></span><svg style="position:relative;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+          <span><span style="display:block; font-size:13px; color:#8FA4C0;">Teléfono</span><span style="display:block; margin-top:2px; font-size:19px; font-weight:700;">+34 652 469 039</span></span>
+        </a>
+        <a href="mailto:grupo.arvion@gmail.com" style="display:flex; align-items:center; gap:20px; color:#fff;" data-style-hover="color:#7CD6F9;">
+          <span style="flex:none; position:relative; width:52px; height:52px; display:grid; place-items:center;"><span style="position:absolute; inset:8px; transform:rotate(45deg); border-radius:8px; background:#13366A; border:1px solid rgba(124,214,249,.35);"></span><svg style="position:relative;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span>
+          <span><span style="display:block; font-size:13px; color:#8FA4C0;">Correo</span><span style="display:block; margin-top:2px; font-size:clamp(17px,4.6vw,19px); font-weight:700; overflow-wrap:anywhere;">grupo.arvion@gmail.com</span></span>
+        </a>
+        <div style="display:flex; align-items:center; gap:20px;">
+          <span style="flex:none; position:relative; width:52px; height:52px; display:grid; place-items:center;"><span style="position:absolute; inset:8px; transform:rotate(45deg); border-radius:8px; background:#13366A; border:1px solid rgba(124,214,249,.35);"></span><svg style="position:relative;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7CD6F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+          <span style="font-size:16px; line-height:1.5; color:#C3D1E4;">Lunes a viernes, de 09:00 a 18:00, hora de Málaga.</span>
+        </div>
+      </div>
+    </div>
+
+    <form style="position:relative; background:#fff; border-radius:4px; padding:clamp(32px,4vw,52px); box-shadow:0 60px 100px -40px rgba(0,0,0,.6), 0 20px 40px -20px rgba(0,0,0,.3); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:18px;" data-on-submit="onSubmit">
+      <label style="min-width:0; display:grid; gap:8px; font-size:13px; font-weight:600; color:#0E2A4F;">Nombre<input type="text" placeholder="Tu nombre" style="height:52px; padding:0 16px; border:1px solid #D5DEE9; border-radius:3px; background:#F6F8FB; font-family:inherit; font-size:15px; color:#0E2A4F; outline:none;" data-style-focus="border-color:#1F7BFF; background:#fff; box-shadow:0 0 0 3px rgba(31,123,255,.15);"></label>
+      <label style="min-width:0; display:grid; gap:8px; font-size:13px; font-weight:600; color:#0E2A4F;">Teléfono<input type="tel" placeholder="+34" style="height:52px; padding:0 16px; border:1px solid #D5DEE9; border-radius:3px; background:#F6F8FB; font-family:inherit; font-size:15px; color:#0E2A4F; outline:none;" data-style-focus="border-color:#1F7BFF; background:#fff; box-shadow:0 0 0 3px rgba(31,123,255,.15);"></label>
+      <label style="min-width:0; display:grid; gap:8px; font-size:13px; font-weight:600; color:#0E2A4F; grid-column:1 / -1;">Correo<input type="email" placeholder="nombre@correo.com" style="height:52px; padding:0 16px; border:1px solid #D5DEE9; border-radius:3px; background:#F6F8FB; font-family:inherit; font-size:15px; color:#0E2A4F; outline:none;" data-style-focus="border-color:#1F7BFF; background:#fff; box-shadow:0 0 0 3px rgba(31,123,255,.15);"></label>
+      <label style="min-width:0; display:grid; gap:8px; font-size:13px; font-weight:600; color:#0E2A4F;">Ubicación de la vivienda<input type="text" placeholder="Málaga, Marbella…" style="height:52px; padding:0 16px; border:1px solid #D5DEE9; border-radius:3px; background:#F6F8FB; font-family:inherit; font-size:15px; color:#0E2A4F; outline:none;" data-style-focus="border-color:#1F7BFF; background:#fff; box-shadow:0 0 0 3px rgba(31,123,255,.15);"></label>
+      <label style="min-width:0; display:grid; gap:8px; font-size:13px; font-weight:600; color:#0E2A4F;">Superficie, m²<input type="number" placeholder="80" style="height:52px; padding:0 16px; border:1px solid #D5DEE9; border-radius:3px; background:#F6F8FB; font-family:inherit; font-size:15px; color:#0E2A4F; outline:none;" data-style-focus="border-color:#1F7BFF; background:#fff; box-shadow:0 0 0 3px rgba(31,123,255,.15);"></label>
+      <label style="min-width:0; display:grid; gap:8px; font-size:13px; font-weight:600; color:#0E2A4F; grid-column:1 / -1;">Tipo de reforma<select style="height:52px; padding:0 14px; border:1px solid #D5DEE9; border-radius:3px; background:#F6F8FB; font-family:inherit; font-size:15px; color:#0E2A4F; outline:none;" data-style-focus="border-color:#1F7BFF; background:#fff; box-shadow:0 0 0 3px rgba(31,123,255,.15);"><option>Reforma integral de piso o ático</option><option>Reforma de casa o villa</option><option>Reforma de cocina</option><option>Reforma de baño</option></select></label>
+      <label style="min-width:0; display:grid; gap:8px; font-size:13px; font-weight:600; color:#0E2A4F; grid-column:1 / -1;">Qué reformas necesitas<textarea rows="3" placeholder="Cuéntanos brevemente el proyecto" style="padding:14px 16px; border:1px solid #D5DEE9; border-radius:3px; background:#F6F8FB; font-family:inherit; font-size:15px; color:#0E2A4F; outline:none; resize:vertical;" data-style-focus="border-color:#1F7BFF; background:#fff; box-shadow:0 0 0 3px rgba(31,123,255,.15);"></textarea></label>
+      <button type="submit" style="grid-column:1 / -1; margin-top:8px; height:60px; border:0; border-radius:3px; background:#1F7BFF; color:#fff; font-family:inherit; font-size:16px; font-weight:600; letter-spacing:.02em; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:12px; box-shadow:0 18px 36px -16px rgba(31,123,255,.8);" data-style-hover="background:#1667E0;">Solicitar presupuesto de reformas<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== 10-footer · Footer ===== -->
+<footer data-screen-label="09 Footer" style="position:relative; background:#fff; padding-top:clamp(80px,9vw,120px); overflow:hidden;">
+  <div style="max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:48px;">
+    <div style="display:grid; gap:20px; align-content:start;">
+      <img src="assets/logo-mr.png" alt="MiRenova" style="height:40px; width:auto;">
+      <p style="font-size:15px; line-height:1.7; color:#5A6A82; max-width:280px;">MiRenova es la marca de reformas de ARVION STUDIO S.L.</p>
+    </div>
+    <nav style="display:grid; gap:12px; align-content:start; font-size:15px; font-weight:500;">
+      <a href="#servicios" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Servicios</a>
+      <a href="#proceso" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Proceso</a>
+      <a href="#precios" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Precios</a>
+      <a href="#zonas" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Zonas</a>
+      <a href="#faq" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Preguntas</a>
+    </nav>
+    <div style="display:grid; gap:12px; align-content:start; font-size:15px;">
+      <a href="tel:+34652469039" style="font-weight:700; color:#0E2A4F;" data-style-hover="color:#1F7BFF;">+34 652 469 039</a>
+      <a href="mailto:grupo.arvion@gmail.com" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">grupo.arvion@gmail.com</a>
+      <span style="color:#5A6A82; line-height:1.6;">Lunes a viernes, de 09:00 a 18:00, hora de Málaga.</span>
+    </div>
+  </div>
+  <div style="margin-top:clamp(64px,7vw,96px); border-top:1px solid #E8EDF3;">
+    <div style="max-width:1300px; margin:0 auto; padding:22px clamp(20px,4vw,40px); display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-size:13px; color:#6B7A90;">
+      <span>© 2026 MiRenova · ARVION STUDIO S.L.</span>
+      <span>Todos los derechos reservados</span>
+    </div>
+  </div>
+</footer>
+</div>
+<script src="static-snapshot.js"></script>
+</body>
+</html>

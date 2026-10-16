@@ -1,0 +1,232 @@
+<wpml-config>
+  <admin-texts>
+    <key name="mrn_settings">
+      <key name="phone" />
+      <key name="email" />
+      <key name="whatsapp" />
+      <key name="hours" />
+      <key name="address" />
+    </key>
+  </admin-texts>
+  <elementor-widgets>
+    <widget name="mrn-hero">
+      <conditions>
+        <condition key="widgetType">mrn-hero</condition>
+      </conditions>
+      <fields>
+        <field type="MR Hero: Eyebrow" editor_type="VISUAL">eyebrow</field>
+        <field type="MR Hero: Title" editor_type="VISUAL">title</field>
+        <field type="MR Hero: Text" editor_type="VISUAL">text</field>
+        <field type="MR Hero: Form title" editor_type="VISUAL">form_title</field>
+        <field type="MR Hero: Form subtitle" editor_type="VISUAL">form_sub</field>
+        <field type="MR Hero: Form sent label" editor_type="LINE">form_sent</field>
+      </fields>
+      <fields-in-item items_of="buttons">
+        <field type="MR Hero: Button text" editor_type="LINE">text</field>
+        <field type="MR Hero: Button URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+      <fields-in-item items_of="strip">
+        <field type="MR Hero: Strip title" editor_type="VISUAL">title</field>
+        <field type="MR Hero: Strip subtitle" editor_type="VISUAL">sub</field>
+        <field type="MR Hero: Strip URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+    </widget>
+    <widget name="mrn-about">
+      <conditions>
+        <condition key="widgetType">mrn-about</condition>
+      </conditions>
+      <fields>
+        <field type="MR About: Eyebrow" editor_type="VISUAL">eyebrow</field>
+        <field type="MR About: Title" editor_type="VISUAL">title</field>
+        <field type="MR About: Text" editor_type="VISUAL">text</field>
+      </fields>
+      <fields-in-item items_of="buttons">
+        <field type="MR About: Button text" editor_type="LINE">text</field>
+        <field type="MR About: Button URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+    </widget>
+    <widget name="mrn-cards">
+      <conditions>
+        <condition key="widgetType">mrn-cards</condition>
+      </conditions>
+      <fields>
+        <field type="MR Feature Cards: Eyebrow" editor_type="VISUAL">eyebrow</field>
+        <field type="MR Feature Cards: Title" editor_type="VISUAL">title</field>
+        <field type="MR Feature Cards: Text" editor_type="VISUAL">text</field>
+        <field type="MR Feature Cards: Filler text" editor_type="VISUAL">fill_text</field>
+      </fields>
+      <fields-in-item items_of="buttons">
+        <field type="MR Feature Cards: Button text" editor_type="LINE">text</field>
+        <field type="MR Feature Cards: Button URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+      <fields-in-item items_of="cards">
+        <field type="MR Feature Cards: Card title" editor_type="VISUAL">title</field>
+        <field type="MR Feature Cards: Card text" editor_type="VISUAL">text</field>
+        <field type="MR Feature Cards: Card button" editor_type="LINE">btn_text</field>
+        <field type="MR Feature Cards: Card button URL" editor_type="LINK" key_of="btn_link">url</field>
+      </fields-in-item>
+    </widget>
+    <widget name="mrn-services">
+      <conditions>
+        <condition key="widgetType">mrn-services</condition>
+      </conditions>
+      <fields>
+        <field type="MR Services: Eyebrow" editor_type="VISUAL">eyebrow</field>
+        <field type="MR Services: Title" editor_type="VISUAL">title</field>
+        <field type="MR Services: Text" editor_type="VISUAL">text</field>
+        <field type="MR Services: Filler text" editor_type="VISUAL">fill_text</field>
+      </fields>
+      <fields-in-item items_of="buttons">
+        <field type="MR Services: Button text" editor_type="LINE">text</field>
+        <field type="MR Services: Button URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+      <fields-in-item items_of="items">
+        <field type="MR Services: Service title" editor_type="VISUAL">title</field>
+        <field type="MR Services: Service text" editor_type="VISUAL">text</field>
+        <field type="MR Services: Service button" editor_type="LINE">btn_text</field>
+        <field type="MR Services: Service button URL" editor_type="LINK" key_of="btn_link">url</field>
+      </fields-in-item>
+    </widget>
+    <widget name="mrn-steps">
+      <conditions>
+        <condition key="widgetType">mrn-steps</condition>
+      </conditions>
+      <fields>
+        <field type="MR Process Steps: Eyebrow" editor_type="VISUAL">eyebrow</field>
+        <field type="MR Process Steps: Title" editor_type="VISUAL">title</field>
+        <field type="MR Process Steps: Text" editor_type="VISUAL">text</field>
+      </fields>
+      <fields-in-item items_of="buttons">
+        <field type="MR Process Steps: Button text" editor_type="LINE">text</field>
+        <field type="MR Process Steps: Button URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+      <fields-in-item items_of="steps">
+        <field type="MR Process Steps: Step title" editor_type="VISUAL">title</field>
+        <field type="MR Process Steps: Step text" editor_type="VISUAL">text</field>
+      </fields-in-item>
+    </widget>
+    <widget name="mrn-pricing">
+      <conditions>
+        <condition key="widgetType">mrn-pricing</condition>
+      </conditions>
+      <fields>
+        <field type="MR Pricing: Eyebrow" editor_type="VISUAL">eyebrow</field>
+        <field type="MR Pricing: Title" editor_type="VISUAL">title</field>
+        <field type="MR Pricing: Text" editor_type="VISUAL">text</field>
+        <field type="MR Pricing: Calculator title" editor_type="VISUAL">calc_title</field>
+        <field type="MR Pricing: Area label" editor_type="LINE">area_label</field>
+        <field type="MR Pricing: Area unit" editor_type="LINE">area_unit</field>
+        <field type="MR Pricing: Tier label" editor_type="LINE">tier_label</field>
+        <field type="MR Pricing: Result label" editor_type="LINE">result_label</field>
+        <field type="MR Pricing: Currency" editor_type="LINE">currency</field>
+        <field type="MR Pricing: Result note" editor_type="LINE">result_note</field>
+        <field type="MR Pricing: Table title" editor_type="VISUAL">table_title</field>
+        <field type="MR Pricing: Table first column" editor_type="LINE">col_first</field>
+        <field type="MR Pricing: Table tier column" editor_type="LINE">col_label</field>
+        <field type="MR Pricing: Table row label" editor_type="LINE">row_label</field>
+        <field type="MR Pricing: Table note" editor_type="VISUAL">table_note</field>
+        <field type="MR Pricing: Banner title" editor_type="VISUAL">banner_title</field>
+        <field type="MR Pricing: Banner text" editor_type="VISUAL">banner_text</field>
+      </fields>
+      <fields-in-item items_of="buttons">
+        <field type="MR Pricing: Button text" editor_type="LINE">text</field>
+        <field type="MR Pricing: Button URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+      <fields-in-item items_of="banner_buttons">
+        <field type="MR Pricing: Banner button text" editor_type="LINE">text</field>
+        <field type="MR Pricing: Banner button URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+      <fields-in-item items_of="tiers">
+        <field type="MR Pricing: Tier name" editor_type="LINE">name</field>
+        <field type="MR Pricing: Tier label" editor_type="VISUAL">label</field>
+        <field type="MR Pricing: Tier price text" editor_type="LINE">price_text</field>
+        <field type="MR Pricing: Tier unit" editor_type="LINE">unit</field>
+        <field type="MR Pricing: Tier note" editor_type="VISUAL">note</field>
+      </fields-in-item>
+    </widget>
+    <widget name="mrn-locations">
+      <conditions>
+        <condition key="widgetType">mrn-locations</condition>
+      </conditions>
+      <fields>
+        <field type="MR Locations: Eyebrow" editor_type="VISUAL">eyebrow</field>
+        <field type="MR Locations: Title" editor_type="VISUAL">title</field>
+        <field type="MR Locations: Text" editor_type="VISUAL">text</field>
+      </fields>
+      <fields-in-item items_of="buttons">
+        <field type="MR Locations: Button text" editor_type="LINE">text</field>
+        <field type="MR Locations: Button URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+      <fields-in-item items_of="items">
+        <field type="MR Locations: Location name" editor_type="LINE">name</field>
+        <field type="MR Locations: Location URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+    </widget>
+    <widget name="mrn-faq">
+      <conditions>
+        <condition key="widgetType">mrn-faq</condition>
+      </conditions>
+      <fields>
+        <field type="MR FAQ: Eyebrow" editor_type="VISUAL">eyebrow</field>
+        <field type="MR FAQ: Title" editor_type="VISUAL">title</field>
+        <field type="MR FAQ: Text" editor_type="VISUAL">text</field>
+      </fields>
+      <fields-in-item items_of="buttons">
+        <field type="MR FAQ: Button text" editor_type="LINE">text</field>
+        <field type="MR FAQ: Button URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+      <fields-in-item items_of="items">
+        <field type="MR FAQ: Question" editor_type="VISUAL">q</field>
+        <field type="MR FAQ: Answer" editor_type="VISUAL">a</field>
+      </fields-in-item>
+    </widget>
+    <widget name="mrn-contact">
+      <conditions>
+        <condition key="widgetType">mrn-contact</condition>
+      </conditions>
+      <fields>
+        <field type="MR Contact: Eyebrow" editor_type="VISUAL">eyebrow</field>
+        <field type="MR Contact: Title" editor_type="VISUAL">title</field>
+        <field type="MR Contact: Text" editor_type="VISUAL">text</field>
+        <field type="MR Contact: Form title" editor_type="VISUAL">form_title</field>
+        <field type="MR Contact: Form subtitle" editor_type="VISUAL">form_sub</field>
+        <field type="MR Contact: Form sent label" editor_type="LINE">form_sent</field>
+      </fields>
+      <fields-in-item items_of="buttons">
+        <field type="MR Contact: Button text" editor_type="LINE">text</field>
+        <field type="MR Contact: Button URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+      <fields-in-item items_of="rows">
+        <field type="MR Contact: Contact label" editor_type="VISUAL">label</field>
+        <field type="MR Contact: Contact value" editor_type="VISUAL">value</field>
+        <field type="MR Contact: Contact URL" editor_type="LINK" key_of="link">url</field>
+      </fields-in-item>
+    </widget>
+    <widget name="mrn-header">
+      <conditions>
+        <condition key="widgetType">mrn-header</condition>
+      </conditions>
+      <fields>
+        <field type="MR Header: Phone text" editor_type="LINE">phone_text</field>
+        <field type="MR Header: Button text" editor_type="LINE">cta_text</field>
+        <field type="MR Header: Button URL" editor_type="LINK" key_of="cta_link">url</field>
+        <field type="MR Header: Logo URL" editor_type="LINK" key_of="logo_link">url</field>
+        <field type="MR Header: Burger label" editor_type="LINE">burger_label</field>
+      </fields>
+    </widget>
+    <widget name="mrn-footer">
+      <conditions>
+        <condition key="widgetType">mrn-footer</condition>
+      </conditions>
+      <fields>
+        <field type="MR Footer: Copyright" editor_type="VISUAL">copy</field>
+        <field type="MR Footer: Right text" editor_type="VISUAL">right</field>
+        <field type="MR Footer: Static year" editor_type="LINE">static_year</field>
+      </fields>
+      <fields-in-item items_of="cols">
+        <field type="MR Footer: Column title" editor_type="VISUAL">title</field>
+        <field type="MR Footer: Column text" editor_type="VISUAL">text</field>
+      </fields-in-item>
+    </widget>
+  </elementor-widgets>
+</wpml-config>

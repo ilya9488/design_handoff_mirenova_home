@@ -1,0 +1,5 @@
+// Minimal behaviour for the static snapshot (the live prototype has the full logic).
+const slides=[...document.querySelectorAll('[data-slide]')];let cur=0;
+setInterval(()=>{slides[cur].style.opacity=0;slides[cur].style.transform='scale(1)';cur=(cur+1)%slides.length;slides[cur].style.opacity=1;slides[cur].style.transform='scale(1.06)';},6000);
+document.querySelectorAll('[data-on-click^="t"]').forEach(b=>{const i=b.getAttribute('data-on-click').slice(1);if(!/^\d$/.test(i))return;b.addEventListener('click',()=>{const open=!document.querySelector('[data-faq-open="'+i+'"]').hidden;document.querySelectorAll('[data-faq-open]').forEach(e=>e.hidden=true);document.querySelectorAll('[data-faq-closed]').forEach(e=>e.hidden=false);if(!open){document.querySelectorAll('[data-faq-open="'+i+'"]').forEach(e=>e.hidden=false);document.querySelectorAll('[data-faq-closed="'+i+'"]').forEach(e=>e.hidden=true);}});});
+document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',e=>e.preventDefault()));

@@ -1,0 +1,12 @@
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:#0E2A4F;font-family:'Onest',system-ui,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5,h6{font-family:'Onest',system-ui,sans-serif;margin:0;line-height:1.12;letter-spacing:-.015em}
+p{margin:0}
+img{display:block;max-width:100%}
+a{color:#1667E0;text-decoration:none}
+a:hover{color:#0E2A4F}
+::selection{background:#CFE4FF;color:#0E2A4F}
+:focus{outline:none}
+:focus-visible{outline:2px solid #1F7BFF;outline-offset:2px}
+section[id]{scroll-margin-top:84px}

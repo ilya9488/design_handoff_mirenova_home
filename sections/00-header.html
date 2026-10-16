@@ -1,0 +1,49 @@
+<!--
+  MiRenova · Header (sticky) + mobile menu
+  Static desktop snapshot (≥1300px) of the live prototype "MiRenova Home.dc.html".
+  data-responsive = layout rule per breakpoint · data-show = visible only at that width · data-style-hover / data-style-focus = interaction styles
+  data-on-* = interaction hook (see README › Interactions) · hidden = inactive state shown via JS
+-->
+<header style="position:sticky; top:0; z-index:50; background:rgba(255,255,255,.94); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid #E8EDF3;">
+  <div style="max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px); height:80px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+    <a href="#inicio" style="display:flex; align-items:center;"><img src="../assets/logo-mr.png" alt="MiRenova" style="height:34px; width:auto; display:block;"></a>
+    
+      <nav style="display:flex; gap:36px; font-size:15px; font-weight:500;" data-show="desktop &gt;1080px">
+        <a href="#servicios" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Servicios</a>
+        <a href="#proceso" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Proceso</a>
+        <a href="#precios" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Precios</a>
+        <a href="#zonas" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Zonas</a>
+        <a href="#faq" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Preguntas</a>
+        <a href="#contacto" style="color:#0E2A4F;" data-style-hover="color:#1F7BFF;">Contacto</a>
+      </nav>
+    
+    <div style="display:flex; align-items:center; gap:16px;">
+      
+        <a href="tel:+34652469039" style="margin-right:8px; font-size:15px; font-weight:700; color:#0E2A4F; white-space:nowrap;" data-show="desktop &gt;1080px" data-style-hover="color:#1F7BFF;">+34 652 469 039</a>
+      
+      
+        <a href="#contacto" style="display:inline-flex; align-items:center; height:46px; padding:0 22px; background:#1F7BFF; color:#fff; font-size:14px; font-weight:600; letter-spacing:.02em; border-radius:3px; white-space:nowrap; box-shadow:0 12px 24px -12px rgba(31,123,255,.7);" data-show="≥560px" data-style-hover="background:#1667E0; color:#fff;">Solicitar presupuesto</a>
+      
+      
+        <button aria-label="Menú" style="width:46px; height:46px; display:grid; place-items:center; border:1.5px solid #D5DEE9; border-radius:3px; background:#fff; color:#0E2A4F; cursor:pointer;" data-show="mobile/tablet ≤1080px" hidden="" data-on-click="toggleMenu" data-style-hover="border-color:#1F7BFF; color:#1F7BFF;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" data-state="menu-closed"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h10"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" data-state="menu-open" hidden=""><path d="M6 6l12 12"></path><path d="M18 6 6 18"></path></svg>
+        </button>
+      
+    </div>
+  </div>
+  
+    <div style="position:absolute; left:0; right:0; top:100%; background:#fff; border-bottom:1px solid #E8EDF3; box-shadow:0 30px 50px -30px rgba(10,29,56,.35);" data-state="menu-open" hidden="">
+      <nav style="max-width:1300px; margin:0 auto; padding:8px clamp(20px,4vw,40px) 28px; display:grid;">
+        <a href="#servicios" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Servicios<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="#proceso" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Proceso<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="#precios" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Precios<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="#zonas" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Zonas<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="#faq" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Preguntas<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="#contacto" style="display:flex; align-items:center; justify-content:space-between; padding:16px 0; border-bottom:1px solid #EEF2F7; font-size:17px; font-weight:600; color:#0E2A4F;" data-on-click="closeMenu" data-style-hover="color:#1F7BFF;">Contacto<span style="width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#CFE4FF;"></span></a>
+        <a href="tel:+34652469039" style="margin-top:20px; font-size:19px; font-weight:700; color:#0E2A4F;">+34 652 469 039</a>
+        <a href="#contacto" style="margin-top:16px; display:flex; align-items:center; justify-content:center; height:54px; background:#1F7BFF; color:#fff; font-size:15px; font-weight:600; letter-spacing:.02em; border-radius:3px;" data-on-click="closeMenu" data-style-hover="background:#1667E0; color:#fff;">Solicitar presupuesto</a>
+      </nav>
+    </div>
+  
+</header>

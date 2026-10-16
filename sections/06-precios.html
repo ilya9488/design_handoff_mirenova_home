@@ -1,0 +1,128 @@
+<!--
+  MiRenova · Precios + calculator + examples table
+  Static desktop snapshot (≥1300px) of the live prototype "MiRenova Home.dc.html".
+  data-responsive = layout rule per breakpoint · data-show = visible only at that width · data-style-hover / data-style-focus = interaction styles
+  data-on-* = interaction hook (see README › Interactions) · hidden = inactive state shown via JS
+-->
+<section id="precios" data-screen-label="05 Precios" style="position:relative; background:#fff; padding:clamp(80px,12.5vw,180px) 0;">
+  <div style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+    <div style="position:absolute; left:0; right:0; top:52%; bottom:0; background:#F2F5F9;"></div>
+    <div style="position:absolute; left:-200px; top:10%; width:400px; aspect-ratio:1; transform:rotate(45deg); border-radius:10%; background:#E4EEFB;"></div>
+    <div style="position:absolute; left:-110px; top:23%; width:220px; aspect-ratio:1; transform:rotate(45deg); border-radius:12%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); box-shadow:0 40px 70px -20px rgba(31,111,255,.45);"></div>
+    <div style="position:absolute; right:-160px; top:60%; width:380px; aspect-ratio:1; transform:rotate(45deg); border-radius:10%; border:2px solid #CFE4FF;"></div>
+    
+      <div style="position:absolute; left:1%; top:56%; width:250px; height:250px; pointer-events:auto; color:#7A8AA0;" data-show="desktop &gt;1080px" data-decor=""><img src="../assets/img/PNG-06-rolled-blueprints-tape.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; display:block;"></div>
+    
+  </div>
+  <div style="position:relative; z-index:1; max-width:1300px; margin:0 auto; padding:0 clamp(20px,4vw,40px);">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr)); gap:32px 80px; align-items:end;">
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; font-size:13px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:#1667E0;"><span style="width:22px; height:2px; background:linear-gradient(90deg,#1F6FFF,#5EC4F8);"></span>Precios</div>
+        <h2 style="margin-top:24px; font-size:clamp(34px,3.7vw,56px); line-height:1.06; font-weight:800; letter-spacing:-.025em; color:#0E2A4F; text-wrap:balance;">Precio de una reforma integral <span style="background:linear-gradient(95deg,#1F6FFF,#3FA0F7); -webkit-background-clip:text; background-clip:text; color:transparent;">en Málaga</span></h2>
+      </div>
+      <div style="display:grid; gap:18px; max-width:540px;">
+        <p style="font-size:17px; line-height:1.75; color:#33435B; text-wrap:pretty;">En MiRenova, el precio orientativo de una reforma integral es de 800–1.000 €/m² en gama básica, 1.000–1.300 €/m² en confort y 1.300–2.000 €/m² en premium, sin IVA.</p>
+        <p style="font-size:16px; line-height:1.75; color:#5A6A82; text-wrap:pretty;">Para nuestras reformas en Málaga, el presupuesto definitivo depende del estado del inmueble, la calidad de los materiales y la complejidad del proyecto. En viviendas, el cálculo se aplica a la superficie interior que se reforma.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:clamp(72px,8vw,110px); display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; align-items:center;" data-responsive="grid: 3 cols &gt;760px | 1 col ≤760px">
+      <div style="background:#F2F5F9; border-radius:4px; padding:48px 40px;">
+        <div style="font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#1667E0;">Gama básica</div>
+        <div style="margin-top:22px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;"><span style="font-size:clamp(36px,3.4vw,46px); font-weight:800; letter-spacing:-.03em; color:#0E2A4F;">800–1.000</span><span style="font-size:17px; font-weight:600; color:#46566E;">€/m²</span></div>
+        <div style="margin-top:12px; font-size:14px; color:#5A6A82;">sin IVA</div>
+      </div>
+      <div style="position:relative; overflow:hidden; background:#0E2A4F; border-radius:4px; padding:64px 40px; box-shadow:0 50px 80px -36px rgba(10,29,56,.6);">
+        <div style="position:absolute; right:-60px; top:-60px; width:150px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8);"></div>
+        <div style="position:absolute; right:30px; bottom:-50px; width:90px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; border:2px solid rgba(124,214,249,.3);"></div>
+        <div style="position:relative; font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#7CD6F9;">Confort</div>
+        <div style="position:relative; margin-top:22px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;"><span style="font-size:clamp(36px,3.4vw,46px); font-weight:800; letter-spacing:-.03em; color:#fff;">1.000–1.300</span><span style="font-size:17px; font-weight:600; color:#C3D1E4;">€/m²</span></div>
+        <div style="position:relative; margin-top:12px; font-size:14px; color:#AFC0D7;">sin IVA</div>
+      </div>
+      <div style="background:#F2F5F9; border-radius:4px; padding:48px 40px;">
+        <div style="font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#1667E0;">Premium</div>
+        <div style="margin-top:22px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;"><span style="font-size:clamp(36px,3.4vw,46px); font-weight:800; letter-spacing:-.03em; color:#0E2A4F;">1.300–2.000</span><span style="font-size:17px; font-weight:600; color:#46566E;">€/m²</span></div>
+        <div style="margin-top:12px; font-size:14px; color:#5A6A82;">sin IVA</div>
+      </div>
+    </div>
+
+    <div style="margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr)); gap:24px; align-items:stretch;">
+      
+        <div style="background:#fff; border-radius:4px; padding:clamp(32px,5vw,44px) clamp(22px,5vw,40px); box-shadow:0 40px 80px -40px rgba(10,29,56,.35), 0 0 0 1px #E3E9F1;">
+          <h3 style="font-size:22px; font-weight:700; color:#0E2A4F;">Calcula tu reforma</h3>
+          <div style="margin-top:30px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
+            <span style="font-size:14px; font-weight:600; color:#46566E;">Superficie interior</span>
+            <div style="display:flex; align-items:center; gap:6px;">
+              <button aria-label="Menos 5 m²" style="width:38px; height:38px; display:grid; place-items:center; border:1px solid #D5DEE9; border-radius:3px; background:#fff; color:#0E2A4F; cursor:pointer; transition:border-color .2s, color .2s;" data-on-click="m2Minus" data-style-hover="border-color:#1F7BFF; color:#1F7BFF;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path></svg></button>
+              <span style="min-width:100px; text-align:center; font-size:22px; font-weight:800; letter-spacing:-.01em; color:#0E2A4F;">80 m²</span>
+              <button aria-label="Más 5 m²" style="width:38px; height:38px; display:grid; place-items:center; border:1px solid #D5DEE9; border-radius:3px; background:#fff; color:#0E2A4F; cursor:pointer; transition:border-color .2s, color .2s;" data-on-click="m2Plus" data-style-hover="border-color:#1F7BFF; color:#1F7BFF;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></button>
+            </div>
+          </div>
+          <div style="position:relative; margin-top:22px; height:30px;">
+            <div style="position:absolute; left:0; right:0; top:50%; height:6px; margin-top:-3px; border-radius:3px; background:#E3E9F1;"></div>
+            <div style="position:absolute; left:0; top:50%; height:6px; margin-top:-3px; border-radius:3px; width:22.73%; background:linear-gradient(90deg,#1F6FFF,#5EC4F8);" data-responsive="runtime: (m2-30)/220*100"></div>
+            <div style="position:absolute; top:50%; left:22.73%; width:22px; height:22px; margin:-11px 0 0 -11px; transform:rotate(45deg); border-radius:5px; background:#fff; border:3px solid #1F7BFF; box-shadow:0 8px 18px -6px rgba(31,123,255,.65); pointer-events:none;" data-responsive="runtime: (m2-30)/220*100"></div>
+            <input type="range" min="30" max="250" step="5" value="80" aria-label="Superficie interior" style="position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:pointer;" data-responsive="runtime: calculator area (30–250, step 5)" data-on-change="onM2">
+          </div>
+          <div style="margin-top:8px; display:flex; justify-content:space-between; font-size:12px; color:#7A8AA0;"><span>30 m²</span><span>250 m²</span></div>
+          <div style="margin-top:28px; font-size:14px; font-weight:600; color:#46566E;">Gama</div>
+          <div style="margin-top:12px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:4px; padding:4px; border-radius:4px; background:#F2F5F9;" data-responsive="grid: 3 cols &gt;480px | 1 col ≤480px">
+            
+              <button style="display:grid; gap:5px; justify-items:start; padding:12px 14px; border:0; border-radius:3px; background:transparent; box-shadow:none; color:#0E2A4F; font-family:inherit; text-align:left; cursor:pointer; transition:background .2s, color .2s, box-shadow .2s;" data-tier="0" data-on-click="pick">
+                <span style="display:flex; align-items:center; gap:8px; font-size:14px; font-weight:700;"><span style="flex:none; width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#C9D6E6;"></span>Básica</span>
+                <span style="font-size:12px; font-weight:500; color:#7A8AA0;">800–1.000 €/m²</span>
+              </button>
+            
+              <button style="display:grid; gap:5px; justify-items:start; padding:12px 14px; border:0; border-radius:3px; background:#0E2A4F; box-shadow:0 12px 24px -12px rgba(10,29,56,.6); color:#FFFFFF; font-family:inherit; text-align:left; cursor:pointer; transition:background .2s, color .2s, box-shadow .2s;" data-tier="1" data-on-click="pick">
+                <span style="display:flex; align-items:center; gap:8px; font-size:14px; font-weight:700;"><span style="flex:none; width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:linear-gradient(135deg,#1F6FFF,#5EC4F8);"></span>Confort</span>
+                <span style="font-size:12px; font-weight:500; color:#7CD6F9;">1.000–1.300 €/m²</span>
+              </button>
+            
+              <button style="display:grid; gap:5px; justify-items:start; padding:12px 14px; border:0; border-radius:3px; background:transparent; box-shadow:none; color:#0E2A4F; font-family:inherit; text-align:left; cursor:pointer; transition:background .2s, color .2s, box-shadow .2s;" data-tier="2" data-on-click="pick">
+                <span style="display:flex; align-items:center; gap:8px; font-size:14px; font-weight:700;"><span style="flex:none; width:8px; height:8px; transform:rotate(45deg); border-radius:2px; background:#C9D6E6;"></span>Premium</span>
+                <span style="font-size:12px; font-weight:500; color:#7A8AA0;">1.300–2.000 €/m²</span>
+              </button>
+            
+          </div>
+          <div style="margin-top:28px; padding:clamp(20px,5vw,28px); border-radius:4px; background:linear-gradient(120deg,#0E2A4F,#13366A); color:#fff; position:relative; overflow:hidden;">
+            <div style="position:absolute; right:-40px; bottom:-40px; width:120px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; background:linear-gradient(135deg,#1F6FFF,#5EC4F8); opacity:.5;"></div>
+            <div style="position:relative; font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#7CD6F9;">Estimación orientativa · 1.000–1.300 €/m²</div>
+            <div style="position:relative; margin-top:12px; font-size:clamp(26px,2.6vw,34px); font-weight:800; letter-spacing:-.02em;">80.000 – 104.000 €</div>
+            <div style="position:relative; margin-top:6px; font-size:14px; color:#AFC0D7;">sin IVA</div>
+          </div>
+        </div>
+      
+      <div style="background:#fff; border-radius:4px; padding:clamp(32px,5vw,44px) clamp(22px,5vw,40px); box-shadow:0 40px 80px -40px rgba(10,29,56,.35), 0 0 0 1px #E3E9F1;">
+        <h3 style="font-size:22px; font-weight:700; color:#0E2A4F;">Ejemplos de presupuesto para un piso</h3>
+        <div style="margin-top:28px; overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; font-size:15px; min-width:420px;">
+            <thead>
+              <tr style="background:#F2F5F9;">
+                <th style="text-align:left; padding:16px 18px; font-weight:700; color:#0E2A4F;">Superficie</th>
+                <th style="text-align:left; padding:16px 18px; font-weight:700; color:#0E2A4F;">Confort: 1.000–1.300 €/m²</th>
+                <th style="text-align:left; padding:16px 18px; font-weight:700; color:#0E2A4F;">Premium: 1.300–2.000 €/m²</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #E3E9F1;"><td style="padding:18px; font-weight:600; color:#0E2A4F;">Piso de 60 m²</td><td style="padding:18px; color:#33435B;">60.000–78.000 €</td><td style="padding:18px; color:#33435B;">78.000–120.000 €</td></tr>
+              <tr style="border-bottom:1px solid #E3E9F1;"><td style="padding:18px; font-weight:600; color:#0E2A4F;">Piso de 70 m²</td><td style="padding:18px; color:#33435B;">70.000–91.000 €</td><td style="padding:18px; color:#33435B;">91.000–140.000 €</td></tr>
+              <tr><td style="padding:18px; font-weight:600; color:#0E2A4F;">Piso de 100 m²</td><td style="padding:18px; color:#33435B;">100.000–130.000 €</td><td style="padding:18px; color:#33435B;">130.000–200.000 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:24px; font-size:14px; line-height:1.7; color:#5A6A82; text-wrap:pretty;">Son ejemplos calculados, no ofertas cerradas. Todos los importes excluyen IVA; la configuración de cada reforma integral se concreta tras la visita.</p>
+      </div>
+    </div>
+
+    <div style="position:relative; overflow:hidden; margin-top:24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:24px 56px; align-items:start; background:#0E2A4F; border-radius:4px; padding:clamp(44px,5vw,72px) clamp(36px,4vw,56px); box-shadow:0 50px 80px -40px rgba(10,29,56,.55);">
+      <img src="../assets/img/FOTO-04-porcelain-tile-quality-check.webp" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block;">
+      <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(10,29,56,.62) 0%, rgba(10,29,56,.8) 45%, rgba(10,29,56,.93) 100%);"></div>
+      <div style="position:absolute; right:-70px; bottom:-70px; width:180px; aspect-ratio:1; transform:rotate(45deg); border-radius:14%; border:2px solid rgba(124,214,249,.25);"></div>
+      <h3 style="position:relative; font-size:clamp(26px,2.4vw,34px); line-height:1.15; font-weight:800; letter-spacing:-.02em; color:#fff; text-wrap:balance; max-width:420px;">Qué influye en el precio de las reformas</h3>
+      <div style="position:relative; display:grid; gap:16px;">
+        <p style="font-size:16px; line-height:1.75; color:#D5E0EE; text-wrap:pretty;">En las reformas influyen demoliciones, instalaciones, acceso, materiales y equipamiento. La cocina y los baños requieren valorar tanto superficies como conexiones y montaje; su precio no depende únicamente de los metros cuadrados.</p>
+        <p style="font-size:16px; line-height:1.75; color:#D5E0EE; text-wrap:pretty;">El presupuesto debe contemplar posibles imprevistos. La colocación de baldosas se calcula según superficie, formato, preparación del soporte y dificultad, sin una tarifa máxima universal.</p>
+      </div>
+    </div>
+  </div>
+</section>
